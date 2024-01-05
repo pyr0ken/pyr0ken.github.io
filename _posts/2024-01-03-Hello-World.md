@@ -5,7 +5,5 @@ categories: [Hello World]
 tags: [Hello World]
 ---
 
-# Hello World
+# Welcome to my personal blog :)
 
-Hello World !
-Welcome to my personal blog :)
