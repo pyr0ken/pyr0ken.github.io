@@ -1,4 +1,795 @@
----
-layout: home
-# Index page
----
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer</title>
+  <meta name="description" content="Personal Portfolio & Engineering CV of Mohammad Hossein Yaghobi. Architecting high-throughput AI gateways, autonomous agents, and privacy-first systems.">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/126270229?v=4" type="image/png">
+  
+  <!-- Compiled Offline Tailwind CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    /* Raycast / Linear Glass Card */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(14, 165, 233, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.12);
+    }
+
+    /* Interactive Dot Grid Background */
+    .bg-grid {
+      background-size: 32px 32px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    }
+
+    /* Print Styles for CV */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-card {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        color: black !important;
+        transform: none !important;
+      }
+      .text-gray-400, .text-gray-300 {
+        color: #444 !important;
+      }
+      .text-white {
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-bg text-gray-200 font-sans min-h-screen selection:bg-sky-500/30 selection:text-sky-200 relative overflow-x-hidden">
+
+  <!-- Background Grid -->
+  <div class="fixed inset-0 bg-grid pointer-events-none z-0 opacity-60"></div>
+
+  <!-- Radial Ambient Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-sky-500/10 blur-[130px] rounded-full pointer-events-none z-0"></div>
+
+  <!-- Sticky Top Navbar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-bg/80 border-b border-white/5 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/10 group-hover:ring-sky-500/50 transition">
+          <img src="https://avatars.githubusercontent.com/u/126270229?v=4" alt="pyr0ken" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-semibold text-white tracking-tight group-hover:text-sky-400 transition">pyr0ken.ir</span>
+          <span class="text-[11px] font-mono text-gray-400 leading-none">Mohammad Hossein</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#stack" class="hover:text-white transition">Stack</a>
+        <a href="#experience" class="hover:text-white transition">Experience</a>
+        <a href="#dns-map" class="hover:text-white transition">Infrastructure</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="toggleTerminalModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition">
+          <svg class="w-3.5 h-3.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <span class="hidden sm:inline">CLI Console</span>
+          <span class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-gray-400">`</span>
+        </button>
+
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition" title="GitHub Profile">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition" title="Print/Export Clean CV">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4" />
+          </svg>
+          <span>PDF / Print</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-20">
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-6 sm:pt-10 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div class="space-y-4 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-sky-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Available for Engineering & Architecture Roles
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+            Mohammad Hossein <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-200">Yaghobi</span>
+          </h1>
+
+          <p class="text-lg text-gray-300 font-mono">
+            Systems & Infrastructure Engineer <span class="text-sky-400">/</span> AI Architect
+          </p>
+
+          <p class="text-gray-400 text-base leading-relaxed max-w-xl">
+            Specializing in high-throughput network gateways, lightweight reverse proxies, autonomous AI agent loops, and privacy-preserving offline applications. Computer Engineering at Kharazmi University.
+          </p>
+
+          <!-- Contact / Quick Badges -->
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono">
+            <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface hover:bg-surfaceHover border border-borderMuted text-gray-300 hover:text-white transition">
+              <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>mmdhosein.yaghoubi@gmail.com</span>
+              <span class="text-[10px] text-gray-500 font-sans ml-1">Copy</span>
+            </button>
+
+            <a href="https://github.com/pyr0ken" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface hover:bg-surfaceHover border border-borderMuted text-gray-300 hover:text-white transition">
+              <span class="text-sky-400 font-bold">GH</span>
+              <span>github.com/pyr0ken</span>
+            </a>
+
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-borderMuted text-gray-400">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Tehran / Karaj, Iran</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric / Hardware Stack Card -->
+        <div class="w-full md:w-80 glass-card p-5 rounded-2xl space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-white/5">
+            <span class="text-xs font-mono uppercase tracking-wider text-gray-400">System Environment</span>
+            <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online
+            </span>
+          </div>
+
+          <div class="space-y-2.5 text-xs font-mono">
+            <div class="flex justify-between items-center text-gray-400">
+              <span>Primary OS</span>
+              <span class="text-gray-200">Arch Linux (Kernel 7.2)</span>
+            </div>
+            <div class="flex justify-between items-center text-gray-400">
+              <span>Window Server</span>
+              <span class="text-gray-200">Wayland (KDE Plasma 6)</span>
+            </div>
+            <div class="flex justify-between items-center text-gray-400">
+              <span>Core Language</span>
+              <span class="text-sky-300 font-semibold">Rust / Python / TS</span>
+            </div>
+            <div class="flex justify-between items-center text-gray-400">
+              <span>Custom Domain</span>
+              <span class="text-gray-200">pyr0ken.ir</span>
+            </div>
+            <div class="flex justify-between items-center text-gray-400">
+              <span>Edge Proxy</span>
+              <span class="text-amber-400 font-medium">Cloudflare Pro DNS</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-white/5 text-[11px] text-gray-400 leading-normal">
+            Obsessed with zero-latency streaming, memory-constrained environments, and self-hosted tooling.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY HIGHLIGHTED PROJECTS -->
+    <section id="projects" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/5 pb-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Featured Engineering Projects</h2>
+          <p class="text-sm text-gray-400">Production systems, autonomous engines, and open architectures.</p>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-1 bg-surface p-1 rounded-lg border border-borderMuted text-xs font-mono" id="filter-container">
+          <button onclick="filterProjects('all', this)" class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 font-medium filter-btn">All</button>
+          <button onclick="filterProjects('systems', this)" class="px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn">Systems & AI</button>
+          <button onclick="filterProjects('apps', this)" class="px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn">Web & Mobile</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
+
+        <!-- 1. Oxiroute -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20">Rust</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">&lt;10MB RAM</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Core Architecture</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
+              Oxiroute <span class="text-xs font-normal text-gray-400">/ High-Performance AI Router</span>
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming, 3-tier resilience fallbacks, SOCKS5 proxy support, and an interactive Ratatui terminal dashboard.
+            </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-sky-400">▹</span> Zero-copy SSE with Axum HTTP engine
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-sky-400">▹</span> Multi-provider fallback combos & token compaction
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">Axum · Tokio · Ratatui</span>
+            <span class="text-gray-400">pyr0ken/oxiroute</span>
+          </div>
+        </div>
+
+        <!-- 2. Khales -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">Kotlin</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">Android</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Mobile Architecture</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              Khales (خالص) <span class="text-xs font-normal text-gray-400">/ Offline Privacy PFM</span>
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Modern, privacy-first personal finance application for Android. Parses Iranian bank SMS notifications completely offline with deterministic regex matching, backed by Room database and SQLCipher AES-256 zero-knowledge encryption.
+            </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-amber-400">▹</span> Jetpack Compose Material 3 UI & interactive analytics
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-amber-400">▹</span> Zero cloud dependencies, 100% on-device cryptography
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">Compose · Room · SQLCipher</span>
+            <span class="text-gray-400">pyr0ken/khales</span>
+          </div>
+        </div>
+
+        <!-- 3. AI Quantitative Trading Platform -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20">Next.js</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Quant & AI</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              Autonomous AI Trading Platform <span class="text-xs font-normal text-gray-400">/ ReAct Core</span>
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Institutional-grade algorithmic trading platform featuring a pure Python ReAct reasoning core, 3-tier memory management, TradingView Lightweight Charts with AI Canvas overlays, and multi-symbol watchlist engine.
+            </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">▹</span> FastAPI backend with asynchronous orderbook telemetry
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">▹</span> Decoupled Next.js interface with real-time SSE chart feeds
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">FastAPI · ReAct · Lightweight Charts</span>
+            <span class="text-gray-400">pyr0ken/ai-trading-platform</span>
+          </div>
+        </div>
+
+        <!-- 4. Golestan Academic Automation Framework -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">Reverse Eng</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-500/10 text-zinc-300 border border-zinc-500/20">SQLite FTS5</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Automation</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              Golestan Automation Client & VahedYar
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Lightweight, pure-HTTP reverse-engineered client for the nationwide university portal (Golestan). Bypasses legacy ASP/ActiveX bottlenecks with an async scraping pipeline, SQLite full-text search, and Typer CLI.
+            </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-blue-400">▹</span> 10x faster course registration search index
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-blue-400">▹</span> Production web client deployed on Vercel (vahedyar)
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">FastAPI · Typer · Vercel</span>
+            <span class="text-gray-400">pyr0ken/golestan-automation</span>
+          </div>
+        </div>
+
+        <!-- 5. Mavis - Floating Notch Assistant -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Tauri 2.0</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-pink-500/10 text-pink-400 border border-pink-500/20">Wayland</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Desktop HUD</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              Mavis <span class="text-xs font-normal text-gray-400">/ Floating Notch Voice Assistant</span>
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Dynamic island & notch AI voice assistant desktop overlay built for Linux Wayland environments using Tauri 2.0, Rust, and React. Integrates real-time audio visualization, hotkey dispatching, and system service hooks.
+            </p>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">Tauri · Rust · Wayland HUD</span>
+            <span class="text-gray-400">pyr0ken/mavis</span>
+          </div>
+        </div>
+
+        <!-- 6. KiasmaX Landing & WebGL Engine -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Three.js</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-500/10 text-slate-300 border border-slate-500/20">Next.js 15</span>
+              </div>
+              <span class="text-xs font-mono text-gray-400">Creative Tech</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              KiasmaX Cyber-Minimalist Experience
+            </h3>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Ultra-premium 60FPS scroll-driven experience showcasing next-gen Computer Vision, Autonomous Robotics, and Vision-Language models with WebGL shader pipelines and smooth scroll kinematics.
+            </p>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+            <span class="text-gray-400">R3F · Three.js · Lenis Scroll</span>
+            <span class="text-gray-400">pyr0ken/kiasmax-website</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS & STACK -->
+    <section id="stack" class="space-y-6">
+      <div class="border-b border-white/5 pb-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Core Technical Stack</h2>
+        <p class="text-sm text-gray-400">Tools, languages, and frameworks employed in daily production.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 1. Systems & Runtime -->
+        <div class="glass-card p-5 rounded-xl space-y-3">
+          <div class="flex items-center gap-2 text-sky-400">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            <h3 class="text-sm font-semibold text-white">Systems & Kernels</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Rust (Axum/Tokio)</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Arch Linux</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Wayland / KDE</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Bash / Shell</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Tauri 2.0</span>
+          </div>
+        </div>
+
+        <!-- 2. AI & Backend -->
+        <div class="glass-card p-5 rounded-xl space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <h3 class="text-sm font-semibold text-white">AI & Backends</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Python 3.12+</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">FastAPI</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Django / DRF</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">ReAct Loops</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Cloudflare AI Gateway</span>
+          </div>
+        </div>
+
+        <!-- 3. Web & Interfaces -->
+        <div class="glass-card p-5 rounded-xl space-y-3">
+          <div class="flex items-center gap-2 text-cyan-400">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <h3 class="text-sm font-semibold text-white">Frontend & UI</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">TypeScript</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">React 19 / Next.js 15</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Tailwind CSS</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Three.js / WebGL</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Lightweight Charts</span>
+          </div>
+        </div>
+
+        <!-- 4. Storage & Mobile -->
+        <div class="glass-card p-5 rounded-xl space-y-3">
+          <div class="flex items-center gap-2 text-amber-400">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            </svg>
+            <h3 class="text-sm font-semibold text-white">Storage & Mobile</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Kotlin (Compose M3)</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">PostgreSQL</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">SQLite (FTS5)</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">SQLCipher (AES-256)</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Redis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="space-y-6">
+      <div class="border-b border-white/5 pb-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Experience & Background</h2>
+        <p class="text-sm text-gray-400">Academic foundation and real-world system implementations.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- 1. Education -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono text-sky-400 font-semibold">EDUCATION</span>
+              <span class="text-gray-600">/</span>
+              <span class="text-xs font-mono text-gray-400">Undergraduate</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">B.Sc. in Computer Engineering</h3>
+            <p class="text-sm text-gray-300">Kharazmi University (دانشگاه خوارزمی)</p>
+            <p class="text-xs text-gray-400 leading-relaxed max-w-2xl">
+              Focus on Operating Systems, Distributed Networks, Algorithm Optimization, and Compilers. Active participant in national algorithmic challenges and open-source systems development.
+            </p>
+          </div>
+          <div class="text-xs font-mono text-gray-400 md:text-right shrink-0">
+            <div>2022 - Present</div>
+            <div class="text-gray-500">Tehran, Iran</div>
+          </div>
+        </div>
+
+        <!-- 2. Software Engineering & Systems -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono text-emerald-400 font-semibold">ROLE & CONTRACTS</span>
+              <span class="text-gray-600">/</span>
+              <span class="text-xs font-mono text-gray-400">Independent Engineer</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Full-Stack & Systems Architecture</h3>
+            <p class="text-sm text-gray-300">Various Production Deployments & Commercial Implementations</p>
+            <ul class="text-xs text-gray-400 space-y-1.5 list-disc list-inside max-w-2xl leading-relaxed">
+              <li>Architected and implemented high-volume e-commerce REST APIs with automated stock synchronizers and caching layers.</li>
+              <li>Engineered zero-copy reverse proxy layers and SOCKS5 tunnels to guarantee uninterrupted upstream connection stability.</li>
+              <li>Authored comprehensive automated test suites and continuous deployment pipelines using GitHub Actions.</li>
+            </ul>
+          </div>
+          <div class="text-xs font-mono text-gray-400 md:text-right shrink-0">
+            <div>2023 - Present</div>
+            <div class="text-gray-500">Remote / Hybrid</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE CLOUDFLARE DNS & INFRASTRUCTURE MAP -->
+    <section id="dns-map" class="space-y-6">
+      <div class="border-b border-white/5 pb-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Active pyr0ken.ir Infrastructure</h2>
+        <p class="text-sm text-gray-400">Live Cloudflare DNS topology and routing nodes verified via Cloudflare API.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs font-mono">
+            <thead>
+              <tr class="border-b border-white/10 text-gray-400">
+                <th class="pb-3 font-semibold">RECORD</th>
+                <th class="pb-3 font-semibold">SUBDOMAIN / NAME</th>
+                <th class="pb-3 font-semibold">TARGET / DESTINATION</th>
+                <th class="pb-3 font-semibold">STATUS</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-gray-300">
+              <tr>
+                <td class="py-3 text-sky-400 font-bold">CNAME</td>
+                <td class="py-3 font-semibold text-white">ai.pyr0ken.ir</td>
+                <td class="py-3 text-gray-400">gateway.ai.cloudflare.com</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Cloudflare Proxied</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 text-emerald-400 font-bold">AAAA</td>
+                <td class="py-3 font-semibold text-white">uniplaner.pyr0ken.ir</td>
+                <td class="py-3 text-gray-400">100:: (Worker Route: uni-planer)</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Cloudflare Proxied</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 text-indigo-400 font-bold">MX</td>
+                <td class="py-3">pyr0ken.ir (Root)</td>
+                <td class="py-3 text-gray-400">route{1..3}.mx.cloudflare.net</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">Email Routing</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 text-purple-400 font-bold">TXT</td>
+                <td class="py-3">pyr0ken.ir</td>
+                <td class="py-3 text-gray-400">v=spf1 include:_spf.mx.cloudflare.net ~all</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">SPF Verified</span></td>
+              </tr>
+              <tr class="bg-sky-500/5">
+                <td class="py-3 text-emerald-300 font-bold">READY</td>
+                <td class="py-3 font-semibold text-sky-300">pyr0ken.ir OR cv.pyr0ken.ir</td>
+                <td class="py-3 text-sky-200">pyr0ken.github.io (GitHub Pages)</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Ready for CNAME bind</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-xs text-gray-400 pt-2 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <span>Connected Zone: <code class="text-sky-300">fc80bb77cc24b9cd5ff138259da42232</code></span>
+          <span class="text-emerald-400">Cloudflare Pro DNS + SSL/TLS Edge Termination</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-8 border-t border-white/5 text-xs font-mono text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Mohammad Hossein Yaghobi. Hosted at <span class="text-sky-400">pyr0ken.ir</span>.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/pyr0ken" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="mailto:mmdhosein.yaghoubi@gmail.com" class="hover:text-white transition">Email</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-white transition">Back to Top ↑</button>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- INTERACTIVE TERMINAL / CLI MODAL (RAYCAST STYLE) -->
+  <div id="cli-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden no-print">
+    <div class="w-full max-w-xl glass-card rounded-2xl overflow-hidden shadow-2xl border border-sky-500/30 flex flex-col">
+      <!-- Terminal Header -->
+      <div class="px-4 py-3 bg-surface border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block cursor-pointer" onclick="toggleTerminalModal()"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+          <span class="text-xs font-mono text-gray-400 ml-2">pyr0ken@archlinux:~</span>
+        </div>
+        <button onclick="toggleTerminalModal()" class="text-gray-400 hover:text-white text-xs font-mono">ESC to close</button>
+      </div>
+
+      <!-- Terminal Body -->
+      <div class="p-4 font-mono text-xs space-y-3 bg-bg/95 max-h-96 overflow-y-auto" id="terminal-history">
+        <div class="text-gray-400">
+          Interactive CLI v1.0. Type <span class="text-sky-400">help</span> for commands, or select a shortcut below.
+        </div>
+        <div class="text-gray-500 text-[11px]">
+          Shortcuts: <button onclick="runCommand('whoami')" class="text-sky-300 underline">whoami</button>, <button onclick="runCommand('projects')" class="text-sky-300 underline">projects</button>, <button onclick="runCommand('dns')" class="text-sky-300 underline">dns</button>, <button onclick="runCommand('contact')" class="text-sky-300 underline">contact</button>
+        </div>
+        <div id="terminal-output" class="space-y-2"></div>
+      </div>
+
+      <!-- Terminal Input Line -->
+      <div class="px-4 py-3 bg-surface border-t border-white/10 flex items-center gap-2 font-mono text-xs">
+        <span class="text-sky-400 font-bold">$</span>
+        <input type="text" id="terminal-input" placeholder="Type command here..." class="w-full bg-transparent text-white focus:outline-none placeholder-gray-600" autocomplete="off" autofocus>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-surface border border-sky-500/30 text-white text-xs font-mono shadow-xl transform translate-y-16 opacity-0 transition-all duration-300 flex items-center gap-2 no-print pointer-events-none">
+    <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Copy to clipboard with visual toast
+    function copyToClipboard(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Copied: ' + text);
+      }).catch(err => {
+        showToast('Error copying');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2500);
+    }
+
+    // Filter projects
+    function filterProjects(category, btn) {
+      const items = document.querySelectorAll('.project-item');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.className = 'px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn';
+      });
+      btn.className = 'px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 font-medium filter-btn';
+    }
+
+    // Raycast CLI Modal
+    function toggleTerminalModal() {
+      const modal = document.getElementById('cli-modal');
+      const input = document.getElementById('terminal-input');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        input.focus();
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Keyboard shortcuts
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '`' || (e.ctrlKey && e.key === 'k')) {
+        e.preventDefault();
+        toggleTerminalModal();
+      } else if (e.key === 'Escape') {
+        const modal = document.getElementById('cli-modal');
+        if (!modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+        }
+      }
+    });
+
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalOutput = document.getElementById('terminal-output');
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const cmd = terminalInput.value.trim().toLowerCase();
+        terminalInput.value = '';
+        if (cmd) {
+          runCommand(cmd);
+        }
+      }
+    });
+
+    function runCommand(cmd) {
+      const line = document.createElement('div');
+      line.className = 'text-sky-300 font-semibold';
+      line.innerHTML = `$ ${cmd}`;
+      terminalOutput.appendChild(line);
+
+      const resp = document.createElement('div');
+      resp.className = 'text-gray-300 pl-2 border-l border-white/10';
+
+      switch (cmd) {
+        case 'whoami':
+          resp.innerHTML = 'Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer, Kharazmi CE student.';
+          break;
+        case 'help':
+          resp.innerHTML = 'Commands: whoami, projects, stack, dns, contact, clear, exit';
+          break;
+        case 'projects':
+          resp.innerHTML = '1. Oxiroute (Rust AI Gateway)<br>2. Khales (Offline Kotlin PFM)<br>3. AI Trading Platform (FastAPI ReAct)<br>4. Golestan Automation (Python Client)<br>5. Mavis (Wayland HUD)';
+          break;
+        case 'stack':
+          resp.innerHTML = 'Rust, Python, TypeScript, Kotlin, Linux, PostgreSQL, SQLite, Tailwind, Next.js';
+          break;
+        case 'dns':
+          resp.innerHTML = 'Active Subdomains:<br>• ai.pyr0ken.ir -> Cloudflare AI Gateway<br>• uniplaner.pyr0ken.ir -> Cloudflare Worker Route<br>• Root: mx and txt routes active';
+          break;
+        case 'contact':
+          resp.innerHTML = 'Email: mmdhosein.yaghoubi@gmail.com<br>GitHub: github.com/pyr0ken';
+          break;
+        case 'clear':
+          terminalOutput.innerHTML = '';
+          return;
+        case 'exit':
+          toggleTerminalModal();
+          return;
+        default:
+          resp.innerHTML = `command not found: ${cmd}. Type 'help' for available commands.`;
+      }
+      terminalOutput.appendChild(resp);
+      const container = document.getElementById('terminal-history');
+      container.scrollTop = container.scrollHeight;
+    }
+  </script>
+</body>
+</html>
