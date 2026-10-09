@@ -4,12 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer</title>
-  <meta name="description" content="Personal Portfolio & Engineering CV of Mohammad Hossein Yaghobi. Architecting high-throughput AI gateways, autonomous agents, and privacy-first systems.">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/126270229?v=4" type="image/png">
-  
+  <meta name="description" content="Personal Portfolio & Engineering CV of Mohammad Hossein Yaghobi (pyr0ken). Architecting high-throughput AI gateways, autonomous agents, and privacy-first systems.">
+  <link rel="canonical" href="https://pyr0ken.ir/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="alternate icon" href="https://avatars.githubusercontent.com/u/126270229?v=4" type="image/png">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pyr0ken.ir/">
+  <meta property="og:title" content="Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer">
+  <meta property="og:description" content="Architecting high-throughput AI gateways, autonomous agents, and privacy-first systems. Kharazmi Computer Engineering.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/126270229?v=4">
+
+  <!-- Twitter / X Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pyr0ken.ir/">
+  <meta name="twitter:title" content="Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer">
+  <meta name="twitter:description" content="Architecting high-throughput AI gateways, autonomous agents, and privacy-first systems.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/126270229?v=4">
+
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammad Hossein Yaghobi",
+    "alternateName": "pyr0ken",
+    "url": "https://pyr0ken.ir",
+    "image": "https://avatars.githubusercontent.com/u/126270229?v=4",
+    "jobTitle": "Systems & AI Engineer",
+    "alumnusOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Kharazmi University"
+    },
+    "sameAs": [
+      "https://github.com/pyr0ken"
+    ],
+    "knowsAbout": [
+      "Rust",
+      "Systems Architecture",
+      "Autonomous AI Agents",
+      "Reverse Proxies",
+      "Distributed Networks",
+      "Kotlin Android",
+      "Python"
+    ]
+  }
+  </script>
+
   <!-- Compiled Offline Tailwind CSS -->
   <link rel="stylesheet" href="./style.css">
   <style>
+    /* Typography Font Stack */
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    }
+    .font-fa {
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
@@ -42,30 +105,40 @@
     /* Interactive Dot Grid Background */
     .bg-grid {
       background-size: 32px 32px;
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     }
 
-    /* Print Styles for CV */
+    /* Print Styles for Clean CV */
     @media print {
       body {
         background: white !important;
-        color: black !important;
+        color: #111827 !important;
       }
       .no-print {
         display: none !important;
       }
       .glass-card {
         background: white !important;
-        border: 1px solid #ddd !important;
+        border: 1px solid #e5e7eb !important;
         box-shadow: none !important;
-        color: black !important;
+        color: #111827 !important;
         transform: none !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
-      .text-gray-400, .text-gray-300 {
-        color: #444 !important;
+      .text-gray-400, .text-gray-300, .text-gray-500 {
+        color: #374151 !important;
       }
       .text-white {
-        color: black !important;
+        color: #111827 !important;
+      }
+      .text-sky-400, .text-emerald-400, .text-amber-400, .text-cyan-400, .text-purple-400, .text-blue-400 {
+        color: #0369a1 !important;
+        font-weight: 600 !important;
+      }
+      a {
+        text-decoration: underline !important;
+        color: #0369a1 !important;
       }
     }
   </style>
@@ -92,36 +165,36 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400 font-medium">
         <a href="#about" class="hover:text-white transition">About</a>
         <a href="#projects" class="hover:text-white transition">Projects</a>
         <a href="#stack" class="hover:text-white transition">Stack</a>
         <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#dns-map" class="hover:text-white transition">Infrastructure</a>
+        <a href="#architecture" class="hover:text-white transition">Architecture</a>
       </nav>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
-        <button onclick="toggleTerminalModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition">
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleTerminalModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition" aria-label="Open CLI console">
           <svg class="w-3.5 h-3.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <polyline points="4 17 10 11 4 5"></polyline>
             <line x1="12" y1="19" x2="20" y2="19"></line>
           </svg>
           <span class="hidden sm:inline">CLI Console</span>
-          <span class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-gray-400">`</span>
+          <span class="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-gray-400 font-mono">`</span>
         </button>
 
-        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition" title="GitHub Profile">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white transition" title="GitHub Profile">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
         </a>
 
-        <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition" title="Print/Export Clean CV">
+        <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 transition" title="Print or Export Clean CV">
           <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4" />
           </svg>
-          <span>PDF / Print</span>
+          <span>CV Print</span>
         </button>
       </div>
     </div>
@@ -148,26 +221,26 @@
           </p>
 
           <p class="text-gray-400 text-base leading-relaxed max-w-xl">
-            Specializing in high-throughput network gateways, lightweight reverse proxies, autonomous AI agent loops, and privacy-preserving offline applications. Computer Engineering at Kharazmi University.
+            Specializing in high-throughput network gateways, lightweight reverse proxies, autonomous AI agent loops, and privacy-preserving offline applications. Computer Engineering undergraduate at Kharazmi University.
           </p>
 
           <!-- Contact / Quick Badges -->
           <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono">
             <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface hover:bg-surfaceHover border border-borderMuted text-gray-300 hover:text-white transition">
-              <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+              <svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span>mmdhosein.yaghoubi@gmail.com</span>
               <span class="text-[10px] text-gray-500 font-sans ml-1">Copy</span>
             </button>
 
-            <a href="https://github.com/pyr0ken" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface hover:bg-surfaceHover border border-borderMuted text-gray-300 hover:text-white transition">
+            <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface hover:bg-surfaceHover border border-borderMuted text-gray-300 hover:text-white transition">
               <span class="text-sky-400 font-bold">GH</span>
               <span>github.com/pyr0ken</span>
             </a>
 
             <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-borderMuted text-gray-400">
-              <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -176,40 +249,40 @@
           </div>
         </div>
 
-        <!-- Metric / Hardware Stack Card -->
-        <div class="w-full md:w-80 glass-card p-5 rounded-2xl space-y-4">
+        <!-- Engineering Competencies & Architecture Focus Card -->
+        <div class="w-full md:w-80 glass-card p-5 rounded-2xl space-y-4 shrink-0">
           <div class="flex items-center justify-between pb-3 border-b border-white/5">
-            <span class="text-xs font-mono uppercase tracking-wider text-gray-400">System Environment</span>
+            <span class="text-xs font-mono uppercase tracking-wider text-gray-400">Engineering Focus</span>
             <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
             </span>
           </div>
 
           <div class="space-y-2.5 text-xs font-mono">
             <div class="flex justify-between items-center text-gray-400">
-              <span>Primary OS</span>
-              <span class="text-gray-200">Arch Linux (Kernel 7.2)</span>
+              <span>Primary Engine</span>
+              <span class="text-sky-300 font-semibold">Rust / Tokio / Axum</span>
             </div>
             <div class="flex justify-between items-center text-gray-400">
-              <span>Window Server</span>
-              <span class="text-gray-200">Wayland (KDE Plasma 6)</span>
+              <span>AI Architectures</span>
+              <span class="text-gray-200">ReAct Loops · Gateways</span>
             </div>
             <div class="flex justify-between items-center text-gray-400">
-              <span>Core Language</span>
-              <span class="text-sky-300 font-semibold">Rust / Python / TS</span>
+              <span>Offline Privacy</span>
+              <span class="text-gray-200">AES-256 SQLCipher</span>
             </div>
             <div class="flex justify-between items-center text-gray-400">
-              <span>Custom Domain</span>
-              <span class="text-gray-200">pyr0ken.ir</span>
+              <span>Network Routing</span>
+              <span class="text-gray-200">Zero-Copy SSE · SOCKS5</span>
             </div>
             <div class="flex justify-between items-center text-gray-400">
-              <span>Edge Proxy</span>
-              <span class="text-amber-400 font-medium">Cloudflare Pro DNS</span>
+              <span>University</span>
+              <span class="text-amber-400 font-medium">Kharazmi CE</span>
             </div>
           </div>
 
           <div class="pt-3 border-t border-white/5 text-[11px] text-gray-400 leading-normal">
-            Obsessed with zero-latency streaming, memory-constrained environments, and self-hosted tooling.
+            Obsessed with zero-latency streaming, memory-constrained footprints (&lt;10MB RSS), and deterministic self-hosted systems.
           </div>
         </div>
       </div>
@@ -220,11 +293,11 @@
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/5 pb-4">
         <div>
           <h2 class="text-2xl font-bold text-white tracking-tight">Featured Engineering Projects</h2>
-          <p class="text-sm text-gray-400">Production systems, autonomous engines, and open architectures.</p>
+          <p class="text-sm text-gray-400">Production systems, autonomous engines, and open-source architectures.</p>
         </div>
         
         <!-- Filter Tabs -->
-        <div class="flex items-center gap-1 bg-surface p-1 rounded-lg border border-borderMuted text-xs font-mono" id="filter-container">
+        <div class="flex items-center gap-1 bg-surface p-1 rounded-lg border border-borderMuted text-xs font-mono no-print" id="filter-container">
           <button onclick="filterProjects('all', this)" class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 font-medium filter-btn">All</button>
           <button onclick="filterProjects('systems', this)" class="px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn">Systems & AI</button>
           <button onclick="filterProjects('apps', this)" class="px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn">Web & Mobile</button>
@@ -233,54 +306,73 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
 
-        <!-- 1. Oxiroute -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
-          <div class="space-y-3">
-            <div class="flex items-start justify-between">
+        <!-- 1. Oxiroute (Flagship System) -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group md:col-span-2 border-sky-500/20 hover:border-sky-500/40" data-category="systems">
+          <div class="space-y-4">
+            <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20">Rust</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">&lt;10MB RAM</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">Rust</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">&lt;10MB RAM</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-purple-500/10 text-purple-300 border border-purple-500/20">Flagship Core</span>
               </div>
-              <span class="text-xs font-mono text-gray-400">Core Architecture</span>
+              <span class="text-xs font-mono text-gray-400">High-Throughput Gateway</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
-              Oxiroute <span class="text-xs font-normal text-gray-400">/ High-Performance AI Router</span>
-            </h3>
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition flex items-center gap-2">
+                Oxiroute
+                <span class="text-xs font-normal text-gray-400 font-mono">/ Ultra-Fast AI Router & LLM Gateway</span>
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mt-2">
+                Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming, 3-tier resilience fallbacks, SOCKS5 proxy support, and an interactive Ratatui terminal dashboard. Designed for extreme memory-constrained execution (&lt;10MB RSS).
+              </p>
+            </div>
 
-            <p class="text-sm text-gray-300 leading-relaxed">
-              Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming, 3-tier resilience fallbacks, SOCKS5 proxy support, and an interactive Ratatui terminal dashboard.
-            </p>
+            <!-- Terminal / Code Proof Box -->
+            <div class="bg-black/50 border border-white/10 rounded-xl p-3.5 font-mono text-[11px] text-gray-300 space-y-1 overflow-x-auto">
+              <div class="text-gray-500">// Zero-copy SSE pipeline with 3-tier fallback combos</div>
+              <div><span class="text-sky-400">let</span> app = <span class="text-emerald-400">Router</span>::new()</div>
+              <div class="pl-4">.route(<span class="text-amber-300">"/v1/chat/completions"</span>, <span class="text-sky-400">post</span>(stream_sse_zerocopy))</div>
+              <div class="pl-4">.layer(<span class="text-emerald-400">ResilienceLayer</span>::with_fallbacks(tier1, tier2, tier3))</div>
+              <div class="pl-4">.layer(<span class="text-emerald-400">TraceLayer</span>::new_for_http());</div>
+            </div>
 
-            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+            <ul class="text-xs text-gray-400 space-y-1.5 font-mono">
               <li class="flex items-center gap-2">
-                <span class="text-sky-400">▹</span> Zero-copy SSE with Axum HTTP engine
+                <span class="text-sky-400">▹</span> Zero-copy SSE with Axum HTTP engine and Tokio async runtime
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-sky-400">▹</span> Multi-provider fallback combos & token compaction
+                <span class="text-sky-400">▹</span> Multi-provider fallback combos, token compaction, and SOCKS5 proxy routing
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-sky-400">▹</span> Integrated Ratatui TUI dashboard for real-time telemetry and throughput inspection
               </li>
             </ul>
           </div>
 
           <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
             <span class="text-gray-400">Axum · Tokio · Ratatui</span>
-            <span class="text-gray-400">pyr0ken/oxiroute</span>
+            <a href="https://github.com/pyr0ken/oxiroute" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>View Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
         <!-- 2. Khales -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group" data-category="apps">
           <div class="space-y-3">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">Kotlin</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">Kotlin</span>
                 <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">Android</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">AES-256</span>
               </div>
               <span class="text-xs font-mono text-gray-400">Mobile Architecture</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white">
-              Khales (خالص) <span class="text-xs font-normal text-gray-400">/ Offline Privacy PFM</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
+              Khales <span class="font-fa text-sm font-normal text-gray-300">(خالص)</span> <span class="text-xs font-normal text-gray-400">/ Offline Privacy PFM</span>
             </h3>
 
             <p class="text-sm text-gray-300 leading-relaxed">
@@ -292,29 +384,36 @@
                 <span class="text-amber-400">▹</span> Jetpack Compose Material 3 UI & interactive analytics
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-amber-400">▹</span> Zero cloud dependencies, 100% on-device cryptography
+                <span class="text-amber-400">▹</span> Zero cloud dependencies, 100% on-device local cryptography
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-amber-400">▹</span> Deterministic Iranian SMS parsing engine
               </li>
             </ul>
           </div>
 
           <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
             <span class="text-gray-400">Compose · Room · SQLCipher</span>
-            <span class="text-gray-400">pyr0ken/khales</span>
+            <a href="https://github.com/pyr0ken/khales" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>View Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
         <!-- 3. AI Quantitative Trading Platform -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group" data-category="systems">
           <div class="space-y-3">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Python</span>
                 <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20">Next.js</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">ReAct Loop</span>
               </div>
               <span class="text-xs font-mono text-gray-400">Quant & AI</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white">
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
               Autonomous AI Trading Platform <span class="text-xs font-normal text-gray-400">/ ReAct Core</span>
             </h3>
 
@@ -329,27 +428,34 @@
               <li class="flex items-center gap-2">
                 <span class="text-emerald-400">▹</span> Decoupled Next.js interface with real-time SSE chart feeds
               </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-400">▹</span> 3-tier agent memory: Short-term, Episodic, Playbooks
+              </li>
             </ul>
           </div>
 
           <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
             <span class="text-gray-400">FastAPI · ReAct · Lightweight Charts</span>
-            <span class="text-gray-400">pyr0ken/ai-trading-platform</span>
+            <a href="https://github.com/pyr0ken/ai-trading-platform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>View Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
         <!-- 4. Golestan Academic Automation Framework -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group" data-category="apps">
           <div class="space-y-3">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">Reverse Eng</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">Reverse Eng</span>
                 <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-500/10 text-zinc-300 border border-zinc-500/20">SQLite FTS5</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live Demo</span>
               </div>
               <span class="text-xs font-mono text-gray-400">Automation</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white">
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
               Golestan Automation Client & VahedYar
             </h3>
 
@@ -359,69 +465,103 @@
 
             <ul class="text-xs text-gray-400 space-y-1 font-mono">
               <li class="flex items-center gap-2">
-                <span class="text-blue-400">▹</span> 10x faster course registration search index
+                <span class="text-blue-400">▹</span> 10x faster course registration search index with SQLite FTS5
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-blue-400">▹</span> Production web client deployed on Vercel (vahedyar)
+                <span class="text-blue-400">▹</span> Production zero-backend web client deployed on Vercel
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-blue-400">▹</span> CLI batch tools for schedule extraction and GPA telemetry
               </li>
             </ul>
           </div>
 
-          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <span class="text-gray-400">FastAPI · Typer · Vercel</span>
-            <span class="text-gray-400">pyr0ken/golestan-automation</span>
+          <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono flex-wrap gap-2">
+            <a href="https://vahedyar.vercel.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+              <span>Live App (VahedYar)</span>
+              <span>↗</span>
+            </a>
+            <a href="https://github.com/pyr0ken/golestan-automation" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
         <!-- 5. Mavis - Floating Notch Assistant -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="systems">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group" data-category="systems">
           <div class="space-y-3">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Tauri 2.0</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold">Tauri 2.0</span>
                 <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-pink-500/10 text-pink-400 border border-pink-500/20">Wayland</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-sky-500/10 text-sky-400 border border-sky-500/20">Rust HUD</span>
               </div>
               <span class="text-xs font-mono text-gray-400">Desktop HUD</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white">
-              Mavis <span class="text-xs font-normal text-gray-400">/ Floating Notch Voice Assistant</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
+              Mavis <span class="text-xs font-normal text-gray-400 font-mono">/ Floating Notch Voice Assistant</span>
             </h3>
 
             <p class="text-sm text-gray-300 leading-relaxed">
               Dynamic island & notch AI voice assistant desktop overlay built for Linux Wayland environments using Tauri 2.0, Rust, and React. Integrates real-time audio visualization, hotkey dispatching, and system service hooks.
             </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-indigo-400">▹</span> Lightweight Linux Wayland HUD with floating window geometry
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-indigo-400">▹</span> Low-latency speech visualization & hotkey daemon hooks
+              </li>
+            </ul>
           </div>
 
           <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
             <span class="text-gray-400">Tauri · Rust · Wayland HUD</span>
-            <span class="text-gray-400">pyr0ken/mavis</span>
+            <a href="https://github.com/pyr0ken/mavis" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>View Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
         <!-- 6. KiasmaX Landing & WebGL Engine -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item" data-category="apps">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between project-item group" data-category="apps">
           <div class="space-y-3">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Three.js</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">Three.js</span>
                 <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-500/10 text-slate-300 border border-slate-500/20">Next.js 15</span>
               </div>
               <span class="text-xs font-mono text-gray-400">Creative Tech</span>
             </div>
 
-            <h3 class="text-lg font-bold text-white">
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition">
               KiasmaX Cyber-Minimalist Experience
             </h3>
 
             <p class="text-sm text-gray-300 leading-relaxed">
               Ultra-premium 60FPS scroll-driven experience showcasing next-gen Computer Vision, Autonomous Robotics, and Vision-Language models with WebGL shader pipelines and smooth scroll kinematics.
             </p>
+
+            <ul class="text-xs text-gray-400 space-y-1 font-mono">
+              <li class="flex items-center gap-2">
+                <span class="text-cyan-400">▹</span> Custom GLSL shader passes & Three.js canvas integration
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-cyan-400">▹</span> Kinetic typography and scroll kinematics with Lenis
+              </li>
+            </ul>
           </div>
 
           <div class="pt-5 mt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
             <span class="text-gray-400">R3F · Three.js · Lenis Scroll</span>
-            <span class="text-gray-400">pyr0ken/kiasmax-website</span>
+            <a href="https://github.com/pyr0ken/kiasmax-website" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold group-hover:translate-x-0.5 transition">
+              <span>View Repository</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
@@ -446,8 +586,8 @@
           </div>
           <div class="flex flex-wrap gap-1.5 text-xs font-mono">
             <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Rust (Axum/Tokio)</span>
-            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Arch Linux</span>
-            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Wayland / KDE</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Linux Architecture</span>
+            <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Wayland Protocol</span>
             <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Bash / Shell</span>
             <span class="px-2 py-1 rounded bg-white/5 border border-white/5 text-gray-300">Tauri 2.0</span>
           </div>
@@ -523,9 +663,9 @@
               <span class="text-xs font-mono text-gray-400">Undergraduate</span>
             </div>
             <h3 class="text-lg font-bold text-white">B.Sc. in Computer Engineering</h3>
-            <p class="text-sm text-gray-300">Kharazmi University (دانشگاه خوارزمی)</p>
+            <p class="text-sm text-gray-300 font-medium">Kharazmi University <span class="font-fa text-xs text-gray-400 font-normal">(دانشگاه خوارزمی)</span></p>
             <p class="text-xs text-gray-400 leading-relaxed max-w-2xl">
-              Focus on Operating Systems, Distributed Networks, Algorithm Optimization, and Compilers. Active participant in national algorithmic challenges and open-source systems development.
+              Specialized coursework in Operating Systems, Distributed Systems, Computer Networks, and Algorithm Analysis. Active contributor to open-source systems software and automated developer tooling.
             </p>
           </div>
           <div class="text-xs font-mono text-gray-400 md:text-right shrink-0">
@@ -543,9 +683,9 @@
               <span class="text-xs font-mono text-gray-400">Independent Engineer</span>
             </div>
             <h3 class="text-lg font-bold text-white">Full-Stack & Systems Architecture</h3>
-            <p class="text-sm text-gray-300">Various Production Deployments & Commercial Implementations</p>
+            <p class="text-sm text-gray-300 font-medium">Production Deployments & Commercial Systems</p>
             <ul class="text-xs text-gray-400 space-y-1.5 list-disc list-inside max-w-2xl leading-relaxed">
-              <li>Architected and implemented high-volume e-commerce REST APIs with automated stock synchronizers and caching layers.</li>
+              <li>Architected and implemented high-volume e-commerce REST APIs with sub-50ms cache layers and automated inventory telemetry.</li>
               <li>Engineered zero-copy reverse proxy layers and SOCKS5 tunnels to guarantee uninterrupted upstream connection stability.</li>
               <li>Authored comprehensive automated test suites and continuous deployment pipelines using GitHub Actions.</li>
             </ul>
@@ -558,101 +698,114 @@
       </div>
     </section>
 
-    <!-- LIVE CLOUDFLARE DNS & INFRASTRUCTURE MAP -->
-    <section id="dns-map" class="space-y-6">
+    <!-- ARCHITECTURE & DEPLOYMENT TOPOLOGY (REPLACING RAW DNS DUMP) -->
+    <section id="architecture" class="space-y-6">
       <div class="border-b border-white/5 pb-4">
-        <h2 class="text-2xl font-bold text-white tracking-tight">Active pyr0ken.ir Infrastructure</h2>
-        <p class="text-sm text-gray-400">Live Cloudflare DNS topology and routing nodes verified via Cloudflare API.</p>
+        <h2 class="text-2xl font-bold text-white tracking-tight">Systems Architecture & Edge Topology</h2>
+        <p class="text-sm text-gray-400">Production infrastructure design, edge routing, and resilience patterns.</p>
       </div>
 
-      <div class="glass-card p-6 rounded-2xl space-y-4">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs font-mono">
-            <thead>
-              <tr class="border-b border-white/10 text-gray-400">
-                <th class="pb-3 font-semibold">RECORD</th>
-                <th class="pb-3 font-semibold">SUBDOMAIN / NAME</th>
-                <th class="pb-3 font-semibold">TARGET / DESTINATION</th>
-                <th class="pb-3 font-semibold">STATUS</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/5 text-gray-300">
-              <tr>
-                <td class="py-3 text-sky-400 font-bold">CNAME</td>
-                <td class="py-3 font-semibold text-white">ai.pyr0ken.ir</td>
-                <td class="py-3 text-gray-400">gateway.ai.cloudflare.com</td>
-                <td class="py-3"><span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Cloudflare Proxied</span></td>
-              </tr>
-              <tr>
-                <td class="py-3 text-emerald-400 font-bold">AAAA</td>
-                <td class="py-3 font-semibold text-white">uniplaner.pyr0ken.ir</td>
-                <td class="py-3 text-gray-400">100:: (Worker Route: uni-planer)</td>
-                <td class="py-3"><span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Cloudflare Proxied</span></td>
-              </tr>
-              <tr>
-                <td class="py-3 text-indigo-400 font-bold">MX</td>
-                <td class="py-3">pyr0ken.ir (Root)</td>
-                <td class="py-3 text-gray-400">route{1..3}.mx.cloudflare.net</td>
-                <td class="py-3"><span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">Email Routing</span></td>
-              </tr>
-              <tr>
-                <td class="py-3 text-purple-400 font-bold">TXT</td>
-                <td class="py-3">pyr0ken.ir</td>
-                <td class="py-3 text-gray-400">v=spf1 include:_spf.mx.cloudflare.net ~all</td>
-                <td class="py-3"><span class="px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">SPF Verified</span></td>
-              </tr>
-              <tr class="bg-sky-500/5">
-                <td class="py-3 text-emerald-300 font-bold">READY</td>
-                <td class="py-3 font-semibold text-sky-300">pyr0ken.ir OR cv.pyr0ken.ir</td>
-                <td class="py-3 text-sky-200">pyr0ken.github.io (GitHub Pages)</td>
-                <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Ready for CNAME bind</span></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Tier 1 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2.5">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-sky-400 font-bold">LAYER 01</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Global Edge & Anycast Ingestion</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Cloudflare Pro Anycast edge network with global TLS 1.3 termination, zero-RTT caching, automated DDoS mitigation, and HTTP/3 QUIC acceleration.
+          </p>
         </div>
 
-        <div class="text-xs text-gray-400 pt-2 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <span>Connected Zone: <code class="text-sky-300">fc80bb77cc24b9cd5ff138259da42232</code></span>
-          <span class="text-emerald-400">Cloudflare Pro DNS + SSL/TLS Edge Termination</span>
+        <!-- Tier 2 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2.5">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-emerald-400 font-bold">LAYER 02</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Resilient</span>
+          </div>
+          <h3 class="text-base font-bold text-white">AI Gateway & Stream Ingestion</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Zero-copy SSE streaming proxying via Cloudflare AI Gateway & Rust Axum backends. Multi-provider token compaction and 3-tier fallback combos.
+          </p>
         </div>
+
+        <!-- Tier 3 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2.5">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-purple-400 font-bold">LAYER 03</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Serverless</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Autonomous Microservices</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Edge worker microservices executing lightweight stateless dispatching, webhook sanitization, and automated routing with zero cold-starts.
+          </p>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="glass-card p-5 rounded-2xl space-y-2.5">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-amber-400 font-bold">LAYER 04</span>
+            <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Encrypted</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Hardened Privacy & Storage</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Zero-knowledge AES-256 SQLCipher on-device cryptography, SOCKS5 upstream tunnels, and verified DMARC/SPF email routing infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+        <div class="flex items-center gap-2 text-gray-300">
+          <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>Edge SSL/TLS Termination · DNSSEC Active · Zero-Trust Architecture</span>
+        </div>
+        <span class="text-sky-400 font-semibold">Live on pyr0ken.ir</span>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="pt-8 border-t border-white/5 text-xs font-mono text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        © 2026 Mohammad Hossein Yaghobi. Hosted at <span class="text-sky-400">pyr0ken.ir</span>.
+        © 2026 Mohammad Hossein Yaghobi. Hosted on <span class="text-sky-400">pyr0ken.ir</span>.
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://github.com/pyr0ken" target="_blank" class="hover:text-white transition">GitHub</a>
-        <a href="mailto:mmdhosein.yaghoubi@gmail.com" class="hover:text-white transition">Email</a>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-white transition">Back to Top ↑</button>
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+        <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="hover:text-white transition cursor-pointer">Email</button>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-white transition cursor-pointer">Back to Top ↑</button>
       </div>
     </footer>
 
   </main>
 
   <!-- INTERACTIVE TERMINAL / CLI MODAL (RAYCAST STYLE) -->
-  <div id="cli-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden no-print">
-    <div class="w-full max-w-xl glass-card rounded-2xl overflow-hidden shadow-2xl border border-sky-500/30 flex flex-col">
+  <div id="cli-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm hidden no-print" role="dialog" aria-modal="true" aria-label="Interactive Terminal Console" onclick="handleBackdropClick(event)">
+    <div class="w-full max-w-xl glass-card rounded-2xl overflow-hidden shadow-2xl border border-sky-500/30 flex flex-col" onclick="event.stopPropagation()">
       <!-- Terminal Header -->
       <div class="px-4 py-3 bg-surface border-b border-white/10 flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block cursor-pointer" onclick="toggleTerminalModal()"></span>
+          <button onclick="toggleTerminalModal()" class="w-3 h-3 rounded-full bg-rose-500/80 inline-block hover:opacity-80 transition" title="Close" aria-label="Close modal"></button>
           <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
           <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-          <span class="text-xs font-mono text-gray-400 ml-2">pyr0ken@archlinux:~</span>
+          <span class="text-xs font-mono text-gray-400 ml-2">pyr0ken@systems:~</span>
         </div>
-        <button onclick="toggleTerminalModal()" class="text-gray-400 hover:text-white text-xs font-mono">ESC to close</button>
+        <button onclick="toggleTerminalModal()" class="text-gray-400 hover:text-white text-xs font-mono cursor-pointer">ESC to close</button>
       </div>
 
       <!-- Terminal Body -->
       <div class="p-4 font-mono text-xs space-y-3 bg-bg/95 max-h-96 overflow-y-auto" id="terminal-history">
         <div class="text-gray-400">
-          Interactive CLI v1.0. Type <span class="text-sky-400">help</span> for commands, or select a shortcut below.
+          Interactive Systems Console v2.0. Type <span class="text-sky-400 font-semibold">help</span> for commands, or click a shortcut below.
         </div>
-        <div class="text-gray-500 text-[11px]">
-          Shortcuts: <button onclick="runCommand('whoami')" class="text-sky-300 underline">whoami</button>, <button onclick="runCommand('projects')" class="text-sky-300 underline">projects</button>, <button onclick="runCommand('dns')" class="text-sky-300 underline">dns</button>, <button onclick="runCommand('contact')" class="text-sky-300 underline">contact</button>
+        <div class="text-gray-500 text-[11px] flex flex-wrap gap-2">
+          <span>Shortcuts:</span>
+          <button onclick="runCommand('whoami')" class="text-sky-300 hover:text-sky-200 underline cursor-pointer">whoami</button>
+          <button onclick="runCommand('projects')" class="text-sky-300 hover:text-sky-200 underline cursor-pointer">projects</button>
+          <button onclick="runCommand('stack')" class="text-sky-300 hover:text-sky-200 underline cursor-pointer">stack</button>
+          <button onclick="runCommand('arch')" class="text-sky-300 hover:text-sky-200 underline cursor-pointer">arch</button>
+          <button onclick="runCommand('contact')" class="text-sky-300 hover:text-sky-200 underline cursor-pointer">contact</button>
         </div>
         <div id="terminal-output" class="space-y-2"></div>
       </div>
@@ -660,32 +813,54 @@
       <!-- Terminal Input Line -->
       <div class="px-4 py-3 bg-surface border-t border-white/10 flex items-center gap-2 font-mono text-xs">
         <span class="text-sky-400 font-bold">$</span>
-        <input type="text" id="terminal-input" placeholder="Type command here..." class="w-full bg-transparent text-white focus:outline-none placeholder-gray-600" autocomplete="off" autofocus>
+        <input type="text" id="terminal-input" placeholder="Type a command (help, projects, whoami)..." class="w-full bg-transparent text-white focus:outline-none placeholder-gray-600" autocomplete="off" autofocus aria-label="Terminal command input">
       </div>
     </div>
   </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-surface border border-sky-500/30 text-white text-xs font-mono shadow-xl transform translate-y-16 opacity-0 transition-all duration-300 flex items-center gap-2 no-print pointer-events-none">
-    <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-surface border border-sky-500/30 text-white text-xs font-mono shadow-xl transform translate-y-16 opacity-0 transition-all duration-300 flex items-center gap-2 no-print pointer-events-none" role="status">
+    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
     </svg>
     <span id="toast-message">Copied to clipboard!</span>
   </div>
 
   <script>
-    // Copy to clipboard with visual toast
+    // Copy to clipboard with toast notification
     function copyToClipboard(text, btnElement) {
-      navigator.clipboard.writeText(text).then(() => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Copied: ' + text);
+        }).catch(() => {
+          fallbackCopyText(text);
+        });
+      } else {
+        fallbackCopyText(text);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
         showToast('Copied: ' + text);
-      }).catch(err => {
-        showToast('Error copying');
-      });
+      } catch (err) {
+        showToast('Address: ' + text);
+      }
+      document.body.removeChild(textArea);
     }
 
     function showToast(msg) {
       const toast = document.getElementById('toast');
       const toastMsg = document.getElementById('toast-message');
+      if (!toast || !toastMsg) return;
       toastMsg.innerText = msg;
       toast.classList.remove('translate-y-16', 'opacity-0');
       toast.classList.add('translate-y-0', 'opacity-100');
@@ -706,20 +881,27 @@
         }
       });
       document.querySelectorAll('.filter-btn').forEach(b => {
-        b.className = 'px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn';
+        b.className = 'px-2.5 py-1 rounded text-gray-400 hover:text-white filter-btn cursor-pointer';
       });
-      btn.className = 'px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 font-medium filter-btn';
+      btn.className = 'px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 font-medium filter-btn cursor-pointer';
     }
 
     // Raycast CLI Modal
     function toggleTerminalModal() {
       const modal = document.getElementById('cli-modal');
       const input = document.getElementById('terminal-input');
+      if (!modal) return;
       if (modal.classList.contains('hidden')) {
         modal.classList.remove('hidden');
-        input.focus();
+        if (input) input.focus();
       } else {
         modal.classList.add('hidden');
+      }
+    }
+
+    function handleBackdropClick(event) {
+      if (event.target === document.getElementById('cli-modal')) {
+        toggleTerminalModal();
       }
     }
 
@@ -730,7 +912,7 @@
         toggleTerminalModal();
       } else if (e.key === 'Escape') {
         const modal = document.getElementById('cli-modal');
-        if (!modal.classList.contains('hidden')) {
+        if (modal && !modal.classList.contains('hidden')) {
           modal.classList.add('hidden');
         }
       }
@@ -739,20 +921,23 @@
     const terminalInput = document.getElementById('terminal-input');
     const terminalOutput = document.getElementById('terminal-output');
 
-    terminalInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const cmd = terminalInput.value.trim().toLowerCase();
-        terminalInput.value = '';
-        if (cmd) {
-          runCommand(cmd);
+    if (terminalInput) {
+      terminalInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const cmd = terminalInput.value.trim().toLowerCase();
+          terminalInput.value = '';
+          if (cmd) {
+            runCommand(cmd);
+          }
         }
-      }
-    });
+      });
+    }
 
     function runCommand(cmd) {
+      if (!terminalOutput) return;
       const line = document.createElement('div');
       line.className = 'text-sky-300 font-semibold';
-      line.innerHTML = `$ ${cmd}`;
+      line.textContent = `$ ${cmd}`;
       terminalOutput.appendChild(line);
 
       const resp = document.createElement('div');
@@ -760,22 +945,22 @@
 
       switch (cmd) {
         case 'whoami':
-          resp.innerHTML = 'Mohammad Hossein Yaghobi (pyr0ken) - Systems & AI Engineer, Kharazmi CE student.';
+          resp.innerHTML = '<strong>Mohammad Hossein Yaghobi (pyr0ken)</strong><br>Systems & AI Engineer · Kharazmi Computer Engineering.';
           break;
         case 'help':
-          resp.innerHTML = 'Commands: whoami, projects, stack, dns, contact, clear, exit';
+          resp.innerHTML = 'Available Commands:<br>• <span class="text-sky-300 font-mono">whoami</span> - Identity & focus<br>• <span class="text-sky-300 font-mono">projects</span> - Production systems list<br>• <span class="text-sky-300 font-mono">stack</span> - Technical language & framework stack<br>• <span class="text-sky-300 font-mono">arch</span> - Edge architecture & topology<br>• <span class="text-sky-300 font-mono">contact</span> - Reach out via email/GitHub<br>• <span class="text-sky-300 font-mono">clear</span> - Clear terminal output<br>• <span class="text-sky-300 font-mono">exit</span> - Close terminal modal';
           break;
         case 'projects':
-          resp.innerHTML = '1. Oxiroute (Rust AI Gateway)<br>2. Khales (Offline Kotlin PFM)<br>3. AI Trading Platform (FastAPI ReAct)<br>4. Golestan Automation (Python Client)<br>5. Mavis (Wayland HUD)';
+          resp.innerHTML = '1. <strong>Oxiroute</strong>: High-Performance Rust AI Gateway (&lt;10MB RAM)<br>2. <strong>Khales</strong>: Privacy-first Offline Kotlin Android PFM<br>3. <strong>AI Trading Platform</strong>: Pure Python ReAct Core & Lightweight Charts<br>4. <strong>Golestan Automation</strong>: SQLite FTS5 Reverse-engineered Client & VahedYar<br>5. <strong>Mavis</strong>: Wayland Floating Notch Desktop HUD (Tauri 2.0 / Rust)<br>6. <strong>KiasmaX</strong>: WebGL 3D Shader Experience (Three.js / Next.js)';
           break;
         case 'stack':
-          resp.innerHTML = 'Rust, Python, TypeScript, Kotlin, Linux, PostgreSQL, SQLite, Tailwind, Next.js';
+          resp.innerHTML = 'Languages: Rust, Python, TypeScript, Kotlin, Bash<br>Frameworks: Tokio, Axum, FastAPI, Next.js, Jetpack Compose<br>Storage: PostgreSQL, SQLite FTS5, SQLCipher (AES-256), Redis';
           break;
-        case 'dns':
-          resp.innerHTML = 'Active Subdomains:<br>• ai.pyr0ken.ir -> Cloudflare AI Gateway<br>• uniplaner.pyr0ken.ir -> Cloudflare Worker Route<br>• Root: mx and txt routes active';
+        case 'arch':
+          resp.innerHTML = 'Topology: Cloudflare Pro Anycast CDN → TLS 1.3 Termination → AI Gateway SSE Zero-Copy → Rust Axum Microservices → AES-256 On-Device Storage.';
           break;
         case 'contact':
-          resp.innerHTML = 'Email: mmdhosein.yaghoubi@gmail.com<br>GitHub: github.com/pyr0ken';
+          resp.innerHTML = 'Email: <a href="mailto:mmdhosein.yaghoubi@gmail.com" class="text-sky-300 underline">mmdhosein.yaghoubi@gmail.com</a><br>GitHub: <a href="https://github.com/pyr0ken" target="_blank" class="text-sky-300 underline">github.com/pyr0ken</a>';
           break;
         case 'clear':
           terminalOutput.innerHTML = '';
@@ -784,11 +969,13 @@
           toggleTerminalModal();
           return;
         default:
-          resp.innerHTML = `command not found: ${cmd}. Type 'help' for available commands.`;
+          resp.textContent = `command not found: ${cmd}. Type 'help' for available commands.`;
       }
       terminalOutput.appendChild(resp);
       const container = document.getElementById('terminal-history');
-      container.scrollTop = container.scrollHeight;
+      if (container) {
+        container.scrollTop = container.scrollHeight;
+      }
     }
   </script>
 </body>
