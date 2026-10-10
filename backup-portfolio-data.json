@@ -1,0 +1,189 @@
+{
+  "profile": {
+    "name": "Mohammad Hossein Yaghobi",
+    "persianName": "محمدحسین یعقوبی",
+    "handle": "pyr0ken",
+    "title": "Backend & DevOps Software Engineer / Systems Architect",
+    "bio": "Architecting high-concurrency RESTful microservices, zero-copy network gateways, automated Kubernetes/Docker pipelines, and offline cryptography. Focused on deterministic execution, memory-constrained footprints (<10MB RSS), and 99.9% uptime SLA.",
+    "location": "Tehran, Iran",
+    "email": "mmdhosein.yaghoubi@gmail.com",
+    "phone": "+98 936 903 7778",
+    "website": "https://pyr0ken.ir",
+    "github": "https://github.com/pyr0ken",
+    "linkedin": "https://www.linkedin.com/in/mohammad-hossein-yaghoubi/",
+    "education": {
+      "degree": "B.Sc. in Computer Engineering",
+      "institution": "Kharazmi University",
+      "institutionPersian": "دانشگاه خوارزمی",
+      "location": "Tehran, Iran",
+      "period": "2022 - Present",
+      "focus": "Operating Systems, Distributed Networks, Compilers, and Algorithm Analysis"
+    }
+  },
+  "honors": [
+    {
+      "title": "Silver Medalist — National Innovation Award",
+      "titlePersian": "دارنده مدال نقره جایزه ملی نوآوری (علوم کامپیوتر)",
+      "category": "Computer Science",
+      "year": "2024",
+      "description": "Awarded national silver medal for exceptional computational problem-solving, algorithmic efficiency, and software architecture innovation in national computing challenges."
+    }
+  ],
+  "experience": [
+    {
+      "company": "MehrsunAi",
+      "role": "Backend & DevOps Software Engineer",
+      "period": "Aug 2025 - Present",
+      "location": "Tehran, Iran · Hybrid",
+      "status": "Current Role",
+      "highlights": [
+        "Designed and built scalable RESTful APIs secured with JWT/OAuth2, supporting thousands of concurrent users in production.",
+        "Automated multi-stage deployment pipelines using Docker, Kubernetes, and CI/CD (GitLab CI & GitHub Actions), reducing release turnaround time by 40%.",
+        "Reduced API latency by 30% through multi-level Redis caching architectures and complex SQL/ORM query optimizations.",
+        "Configured centralized logging with ELK stack and infrastructure observability via Prometheus & Grafana to maintain a strict 99.9% uptime SLA.",
+        "Authored comprehensive OpenAPI/Swagger specifications and Postman collections to ensure seamless collaboration across engineering teams."
+      ],
+      "technologies": [
+        "Kubernetes",
+        "Docker",
+        "FastAPI",
+        "CI/CD (GitLab/GitHub)",
+        "Redis",
+        "Prometheus",
+        "Grafana",
+        "ELK Stack",
+        "PostgreSQL",
+        "JWT/OAuth2"
+      ]
+    },
+    {
+      "company": "Chabahar University of Maritime and Marine Sciences",
+      "role": "Backend Developer",
+      "period": "Jan 2023 - Aug 2024",
+      "location": "Chabahar, Iran",
+      "highlights": [
+        "Developed enterprise booking, course scheduling, and CRM workflows using Django REST Framework with role-based permission tiers.",
+        "Integrated secure payment gateways via asynchronous Webhook listeners and built a ticketing system; prevented race-condition double-booking using PostgreSQL transactional isolation.",
+        "Boosted database throughput by 25% through schema re-indexing, query optimization, and localized Redis caching layers.",
+        "Documented all API endpoints with Swagger OpenAPI and published onboarding guides for frontend development teams."
+      ],
+      "technologies": [
+        "Django REST Framework",
+        "PostgreSQL",
+        "Payment Webhooks",
+        "Transactional Concurrency",
+        "Swagger OpenAPI",
+        "Redis"
+      ]
+    },
+    {
+      "company": "AshtangaYogaHome (Finland) & Chabahar University",
+      "role": "Python Programming Instructor",
+      "period": "2024 - 2025",
+      "location": "Remote / Finland & Iran",
+      "highlights": [
+        "Conducted university coursework and international mentorship on Python programming, algorithm design, memory management, and object-oriented architecture.",
+        "Guided students through real-world automation scripts and backend web services."
+      ],
+      "technologies": [
+        "Python",
+        "Algorithms & Data Structures",
+        "OOP Architecture"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Oxiroute",
+      "slug": "oxiroute",
+      "badge": "Flagship System",
+      "category": "Systems & AI Gateway",
+      "tagline": "High-Throughput Production AI Gateway & LLM Router",
+      "github": "https://github.com/pyr0ken/oxiroute",
+      "description": "Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming via Axum and Tokio runtime, 3-tier resilience fallback cascades, SOCKS5 upstream proxy tunneling, token compaction, and an interactive Ratatui TUI dashboard. Engineered for sub-millisecond overhead and strict memory constraints (<10MB RSS).",
+      "technologies": ["Rust", "Axum", "Tokio", "Zero-Copy SSE", "SOCKS5", "Ratatui TUI", "Token Compactor"]
+    },
+    {
+      "name": "Khales",
+      "persianName": "خالص",
+      "slug": "khales",
+      "category": "Mobile & Cryptography",
+      "tagline": "Privacy-First Offline Personal Finance Application",
+      "github": "https://github.com/pyr0ken/khales",
+      "description": "Android personal finance application built with Jetpack Compose Material 3 and Room database. Parses incoming Iranian bank SMS notifications 100% offline with zero cloud telemetry using deterministic regex matching. Backed by SQLCipher AES-256 zero-knowledge on-device encryption.",
+      "technologies": ["Kotlin", "Jetpack Compose M3", "Room DB", "SQLCipher (AES-256)", "Deterministic Regex", "Zero Cloud Telemetry"]
+    },
+    {
+      "name": "Autonomous AI Trading Platform",
+      "slug": "ai-trading-platform",
+      "category": "Quant & AI",
+      "tagline": "Pure Python ReAct Agent Core with Asynchronous Telemetry",
+      "github": "https://github.com/pyr0ken/ai-trading-platform",
+      "description": "Algorithmic trading engine with pure Python ReAct reasoning core, 3-tier memory management (Short-term, Episodic, Playbooks), FastAPI asynchronous orderbook streaming, and TradingView Lightweight Charts with AI Canvas overlays.",
+      "technologies": ["Python", "FastAPI", "ReAct Loop", "Lightweight Charts", "Next.js", "Asynchronous SSE"]
+    },
+    {
+      "name": "Golestan Automation & VahedYar",
+      "slug": "golestan-automation",
+      "category": "Automation & Web",
+      "tagline": "High-Speed Reverse-Engineered Client & Full-Text Search",
+      "github": "https://github.com/pyr0ken/golestan-automation",
+      "liveDemo": "https://vahedyar.vercel.app",
+      "description": "Lightweight, pure-HTTP reverse-engineered client for the nationwide university portal (Golestan). Bypasses legacy ASP/ActiveX bottlenecks with an async scraping pipeline, SQLite full-text search index (FTS5), Typer CLI, and a production web SPA on Vercel.",
+      "technologies": ["Reverse Engineering", "SQLite FTS5", "FastAPI", "Typer CLI", "Vercel SPA"]
+    },
+    {
+      "name": "Mavis Desktop HUD",
+      "slug": "mavis",
+      "category": "Desktop Systems",
+      "tagline": "Wayland Linux Floating Notch & Dynamic Island Assistant",
+      "github": "https://github.com/pyr0ken/mavis",
+      "description": "Wayland Linux floating notch & dynamic island desktop assistant built with Tauri 2.0, Rust, and React. Integrates low-latency audio visualization and hardware hotkey dispatching.",
+      "technologies": ["Tauri 2.0", "Rust", "Wayland Protocol", "React"]
+    },
+    {
+      "name": "KiasmaX 3D WebGL",
+      "slug": "kiasmax-website",
+      "category": "Creative Tech",
+      "tagline": "Cyber-Minimalist 60FPS WebGL Experience",
+      "github": "https://github.com/pyr0ken/kiasmax-website",
+      "description": "Ultra-premium 60FPS scroll-driven experience showcasing Vision-Language models with WebGL shader passes, Three.js canvas, and Lenis scroll kinematics.",
+      "technologies": ["Three.js", "GLSL Shaders", "Next.js 15", "Lenis"]
+    }
+  ],
+  "technicalIndex": {
+    "backendAndCloud": [
+      "Rust (Axum, Tokio)",
+      "Python (FastAPI, Django REST)",
+      "Docker",
+      "Kubernetes",
+      "CI/CD (GitLab CI, GitHub Actions)",
+      "Celery",
+      "RabbitMQ"
+    ],
+    "observabilityAndDatabases": [
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "PostgreSQL",
+      "Redis (Caching, Streams)",
+      "SQLite (FTS5)",
+      "SQLCipher (AES-256)"
+    ],
+    "networkingAndSecurity": [
+      "Zero-Copy SSE",
+      "SOCKS5 Tunnels",
+      "Cloudflare Pro Edge & Anycast",
+      "TLS 1.3 Termination",
+      "JWT/OAuth2"
+    ],
+    "frontendAndMobile": [
+      "TypeScript",
+      "React 19",
+      "Next.js 15",
+      "Kotlin (Jetpack Compose M3)",
+      "Three.js (WebGL)",
+      "Tailwind CSS"
+    ]
+  }
+}
