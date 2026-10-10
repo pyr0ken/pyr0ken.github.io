@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohammad Hossein Yaghobi (pyr0ken) — Systems & DevOps Engineer</title>
-  <meta name="description" content="Engineering CV & Systems Portfolio of Mohammad Hossein Yaghobi (pyr0ken). Backend & DevOps Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award.">
+  <meta name="description" content="Personal Portfolio & Engineering CV of Mohammad Hossein Yaghobi (pyr0ken). Backend & DevOps Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award.">
   <link rel="canonical" href="https://pyr0ken.ir/">
 
   <!-- Favicon -->
@@ -25,10 +25,10 @@
   <meta name="twitter:description" content="Backend & DevOps Software Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award.">
   <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/126270229?v=4">
 
-  <!-- Typography -->
+  <!-- Official Geist Typography (The Chanh Dai / Vercel Font Stack) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -74,31 +74,33 @@
   <link rel="stylesheet" href="./style.css">
 
   <style>
+    /* Chanh Dai / Shadcn Zinc Pixel-Perfect Design System */
     :root {
-      --bg: #090a0f;
-      --card-bg: #11131a;
-      --card-elevated: #161922;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(255, 255, 255, 0.18);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --accent-sky: #38bdf8;
-      --accent-emerald: #34d399;
+      --bg: #09090b;
+      --foreground: #fafafa;
+      --muted: #18181b;
+      --muted-foreground: #a1a1aa;
+      --subtle: #71717a;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-hover: rgba(255, 255, 255, 0.16);
+      --card-bg: rgba(24, 24, 27, 0.4);
+      --card-hover: rgba(39, 39, 42, 0.5);
+      --accent: #38bdf8;
       --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
     }
 
     body {
       background-color: var(--bg);
-      color: var(--text-muted);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--muted-foreground);
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
     }
 
     code, pre, .font-mono {
-      font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+      font-family: 'Geist Mono', monospace;
     }
 
     .font-fa {
@@ -113,144 +115,150 @@
       background: var(--bg);
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #27272a;
       border-radius: 9999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
+      background: #3f3f46;
     }
 
-    /* Container Constraint (Golden Reading Measure) */
-    .page-container {
-      max-width: 720px;
+    /* Pixel-Perfect Magazine Document Shell (Centered & Framed) */
+    .document-frame {
+      max-width: 680px;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      background-color: rgba(9, 9, 11, 0.6);
+      min-height: 100vh;
     }
 
-    /* Nav Bar Layout */
-    .nav-container {
+    /* Hairline Dividers (screen-line) */
+    .screen-line-b {
+      border-bottom: 1px solid var(--line);
+    }
+    .screen-line-t {
+      border-top: 1px solid var(--line);
+    }
+
+    /* Navigation Layout */
+    .nav-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 3.5rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
     }
-    .nav-links-cluster {
+    .nav-items {
       display: flex;
       align-items: center;
       gap: 1.25rem;
     }
-    .nav-item {
-      color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
+    .nav-link {
+      font-family: 'Geist Mono', monospace;
       font-size: 0.8125rem;
-      transition: color 0.15s ease;
+      color: var(--muted-foreground);
       text-decoration: none;
+      transition: color 0.15s ease;
     }
-    .nav-item:hover {
-      color: var(--text-main);
+    .nav-link:hover {
+      color: var(--foreground);
     }
 
-    /* Section Headers */
-    .section-header {
+    /* Panel Headers */
+    .panel-header {
+      padding: 1rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.625rem;
-      margin-bottom: 1.25rem;
+      background: rgba(24, 24, 27, 0.2);
+      border-bottom: 1px solid var(--line);
     }
-    .section-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-dim);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .panel-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--foreground);
     }
-    .section-num {
-      color: var(--accent-sky);
-      font-weight: 700;
+    .panel-meta {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.6875rem;
+      color: var(--subtle);
     }
 
-    /* Card Architecture */
-    .system-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 1.25rem 1.35rem;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      margin-bottom: 1rem;
-    }
-    .system-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 6px 22px -2px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      transform: translateY(-1px);
+    /* Panel Content Padding */
+    .panel-content {
+      padding: 1.25rem;
     }
 
-    /* Unified Cohesive Tags */
-    .badge {
-      font-family: 'JetBrains Mono', monospace;
+    /* Chanh Dai / Shadcn Interactive Items */
+    .item-row {
+      padding: 1.125rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      transition: background-color 0.15s ease;
+    }
+    .item-row:last-child {
+      border-bottom: none;
+    }
+    .item-row:hover {
+      background-color: var(--card-bg);
+    }
+
+    /* Subtle Badge Component */
+    .badge-chip {
+      font-family: 'Geist Mono', monospace;
       font-size: 0.6875rem;
       font-weight: 500;
-      padding: 2.5px 8px;
+      padding: 2px 7px;
       border-radius: 5px;
+      background: rgba(255, 255, 255, 0.04);
+      color: #d4d4d8;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      line-height: 1.25;
+      line-height: 1.3;
     }
-    .badge-amber {
-      background: rgba(245, 158, 11, 0.1);
+    .badge-chip-amber {
+      background: rgba(245, 158, 11, 0.08);
       color: #fcd34d;
-      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-color: rgba(245, 158, 11, 0.2);
     }
-    .badge-sky {
-      background: rgba(56, 189, 248, 0.1);
+    .badge-chip-sky {
+      background: rgba(56, 189, 248, 0.08);
       color: #7dd3fc;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-    }
-    .badge-emerald {
-      background: rgba(52, 211, 153, 0.1);
-      color: #6ee7b7;
-      border: 1px solid rgba(52, 211, 153, 0.25);
+      border-color: rgba(56, 189, 248, 0.2);
     }
 
-    /* Print CV Formatting */
+    /* Print CV */
     @media print {
       body {
         background: #ffffff !important;
-        color: #0f172a !important;
-        font-size: 10.5pt !important;
+        color: #09090b !important;
+        font-size: 10pt !important;
       }
       .no-print {
         display: none !important;
       }
-      .system-card {
-        background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
-        box-shadow: none !important;
-        transform: none !important;
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
+      .document-frame {
+        max-width: 100% !important;
+        border: none !important;
+        background: none !important;
       }
-      .badge {
-        background: #f1f5f9 !important;
-        color: #334155 !important;
-        border: 1px solid #cbd5e1 !important;
+      .screen-line-b, .screen-line-t, .item-row {
+        border-color: #e4e4e7 !important;
+      }
+      .badge-chip {
+        background: #f4f4f5 !important;
+        color: #27272a !important;
+        border-color: #e4e4e7 !important;
       }
       .text-white, h1, h2, h3, h4 {
-        color: #0f172a !important;
+        color: #09090b !important;
       }
       p, li {
-        color: #334155 !important;
+        color: #27272a !important;
       }
       a {
         color: #0284c7 !important;
@@ -259,541 +267,517 @@
     }
   </style>
 </head>
-<body class="min-h-screen selection:bg-sky-500/20 selection:text-sky-200">
+<body class="selection:bg-zinc-800 selection:text-white">
 
-  <!-- Sticky Top Header -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#090a0f]/85 border-b border-white/5 no-print">
-    <div class="page-container nav-container">
-      <div class="flex items-center gap-2.5">
-        <a href="#about" class="text-sm font-bold text-white tracking-tight hover:text-sky-400 transition flex items-center gap-2">
-          <!-- Geometric Monogram Emblem -->
-          <div class="w-6 h-6 rounded-md bg-slate-900 border border-white/15 flex items-center justify-center text-sky-400 text-xs font-mono font-bold shadow-sm">
-            &gt;_
-          </div>
-          <span>pyr0ken.ir</span>
-        </a>
-      </div>
+  <!-- Document Column Shell (Chanh Dai Magazine / Framed Layout) -->
+  <div class="document-frame">
 
-      <!-- Navigation & Print Cluster (Explicit Flex with Gaps) -->
-      <nav class="nav-links-cluster">
-        <a href="#experience" class="nav-item">Experience</a>
-        <a href="#systems" class="nav-item">Systems</a>
-        <a href="#honors" class="nav-item hidden sm:inline">Honors</a>
-        <a href="#stack" class="nav-item hidden sm:inline">Stack</a>
-
-        <div style="width: 1px; height: 14px; background: rgba(255, 255, 255, 0.12); margin: 0 2px;"></div>
-
-        <button onclick="window.print()" class="nav-item flex items-center gap-1.5 cursor-pointer text-slate-300 hover:text-white" title="Print Clean CV">
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4" />
-          </svg>
-          <span>CV Print</span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main Content Container -->
-  <main class="page-container py-10 sm:py-14 space-y-12">
-
-    <!-- HERO SECTION -->
-    <section id="about" class="space-y-5">
-      <div class="space-y-2">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span class="text-xs font-mono text-emerald-400 font-medium">Backend & DevOps Software Engineer @ MehrsunAi</span>
+    <!-- Top Sticky Header -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-zinc-950/85 screen-line-b no-print">
+      <div class="nav-bar">
+        <div class="flex items-center gap-2.5">
+          <a href="#about" class="text-sm font-bold text-white tracking-tight hover:text-sky-400 transition flex items-center gap-2">
+            <span class="w-6 h-6 rounded bg-zinc-900 border border-zinc-700/60 flex items-center justify-center text-sky-400 text-xs font-mono font-bold">
+              &gt;_
+            </span>
+            <span>pyr0ken.ir</span>
+          </a>
         </div>
 
-        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+        <nav class="nav-items">
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#systems" class="nav-link">Systems</a>
+          <a href="#honors" class="nav-link hidden sm:inline">Honors</a>
+          <a href="#stack" class="nav-link hidden sm:inline">Stack</a>
+
+          <div style="width: 1px; height: 14px; background: rgba(255, 255, 255, 0.12);"></div>
+
+          <button onclick="window.print()" class="nav-link flex items-center gap-1.5 cursor-pointer text-zinc-300 hover:text-white" title="Print Clean CV">
+            <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4" />
+            </svg>
+            <span>CV Print</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECTION 00: IDENTITY & PROFILE HEADER (Pixel-Perfect Clean) -->
+    <section id="about" class="screen-line-b p-5 sm:p-7 space-y-5">
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs font-mono text-emerald-400 font-medium">Backend & DevOps Engineer @ MehrsunAi</span>
+        </div>
+
+        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100">
           Mohammad Hossein Yaghobi
         </h1>
 
-        <p class="text-xs sm:text-sm font-mono text-slate-300">
-          Systems & Infrastructure Architect <span class="text-slate-600">/</span> Kharazmi Computer Engineering
+        <p class="text-xs sm:text-sm font-mono text-zinc-400">
+          Systems & Infrastructure Architect <span class="text-zinc-600">/</span> Kharazmi Computer Engineering
         </p>
       </div>
 
       <!-- Concise Professional Bio -->
-      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-        Architecting high-concurrency RESTful microservices, zero-copy network gateways, automated Kubernetes/Docker pipelines, and offline cryptography. Obsessed with deterministic execution, memory-constrained environments (<code class="text-sky-300 text-[11px] font-mono">&lt;10MB RSS</code>), and 99.9% uptime SLA.
+      <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        Architecting high-concurrency RESTful microservices, zero-copy network gateways, automated Kubernetes/Docker pipelines, and offline cryptography. Focused on deterministic execution, memory-constrained footprints (<code class="text-sky-300 text-[11px] font-mono">&lt;10MB RSS</code>), and 99.9% uptime SLA.
       </p>
 
-      <!-- Key Accolades & Metadata Row -->
-      <div class="flex flex-wrap items-center gap-2 pt-1">
-        <div class="badge badge-amber">
+      <!-- Overview Metadata Grid (Chanh Dai Style) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs font-mono">
+        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
           <span>🥈</span>
-          <span>Silver Medalist — National Innovation Award (CS)</span>
+          <span>Silver Medalist — National Innovation Award</span>
         </div>
-        <div class="badge">
-          <span>📍 Tehran, Iran</span>
+        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
+          <span>📍</span>
+          <span>Tehran, Iran · Hybrid</span>
         </div>
-        <div class="badge">
-          <span>🎓 Kharazmi University</span>
+        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
+          <span>🎓</span>
+          <span>B.Sc. CE @ Kharazmi University</span>
+        </div>
+        <div class="flex items-center justify-between p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
+          <span class="flex items-center gap-2">
+            <span>✉️</span>
+            <span>mmdhosein.yaghoubi@gmail.com</span>
+          </span>
+          <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="text-[10px] text-sky-400 hover:text-sky-300 cursor-pointer ml-1">Copy</button>
         </div>
       </div>
 
-      <!-- Contact & Social Pills -->
-      <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs font-mono">
-        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-sky-500/30 hover:border-sky-500/60 transition group">
-          <svg class="w-3.5 h-3.5 text-sky-400 fill-current group-hover:scale-110 transition shrink-0" viewBox="0 0 24 24">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.64-1.64 1.64 1.64 0 0 0-1.64-1.64 1.64 1.64 0 0 0 1.64 1.64m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
-          </svg>
-          <span class="font-semibold text-white">LinkedIn</span>
-          <span class="text-slate-500 font-sans">↗</span>
+      <!-- Quick Action Links -->
+      <div class="flex items-center gap-3 pt-1 text-xs font-mono">
+        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-medium">
+          <span>LinkedIn</span>
+          <span>↗</span>
         </a>
-
-        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-white/10 hover:border-white/20 transition">
-          <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
+        <span class="text-zinc-700">·</span>
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-zinc-300 hover:text-white font-medium">
           <span>GitHub</span>
-          <span class="text-slate-500 font-sans">↗</span>
+          <span>↗</span>
         </a>
-
-        <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-white/10 hover:border-white/20 transition cursor-pointer">
-          <svg class="w-3.5 h-3.5 text-sky-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <span>Email</span>
-          <span class="text-[10px] text-slate-500 font-sans ml-0.5">Copy</span>
-        </button>
       </div>
     </section>
 
-    <!-- 01. WORK EXPERIENCE -->
-    <section id="experience" class="space-y-4">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="section-num">01</span>
-          <span>/ Work Experience</span>
-        </h2>
-        <span class="text-xs font-mono text-slate-500">Production Systems</span>
+    <!-- SECTION 01: WORK EXPERIENCE -->
+    <section id="experience" class="screen-line-b">
+      <div class="panel-header">
+        <h2 class="panel-title">Experience</h2>
+        <span class="panel-meta">Production Roles · 2023 - Present</span>
       </div>
 
-      <!-- Role 1: MehrsunAi -->
-      <article class="system-card space-y-3">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <div>
-            <h3 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
-              <span>Backend & DevOps Software Engineer</span>
-              <span class="text-sky-400 font-medium">@ MehrsunAi</span>
-            </h3>
-            <p class="text-xs font-mono text-slate-400">Tehran, Iran · Hybrid</p>
-          </div>
-          <span class="badge badge-amber shrink-0 font-mono">
-            Aug 2025 – Present
-          </span>
-        </div>
-
-        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
-          <li>
-            Designed and built scalable <strong>RESTful APIs</strong> secured with JWT/OAuth2, supporting thousands of concurrent users in production.
-          </li>
-          <li>
-            Automated multi-stage deployment pipelines using <strong>Docker, Kubernetes, and CI/CD</strong> (GitLab CI & GitHub Actions), reducing release turnaround time by <strong>40%</strong>.
-          </li>
-          <li>
-            Reduced API latency by <strong>30%</strong> through multi-level <strong>Redis caching</strong> architectures and complex SQL/ORM query optimizations.
-          </li>
-          <li>
-            Configured centralized logging with <strong>ELK stack</strong> and infrastructure observability via <strong>Prometheus & Grafana</strong> to maintain a strict <strong>99.9% uptime SLA</strong>.
-          </li>
-          <li>
-            Authored comprehensive OpenAPI/Swagger specifications and Postman collections to ensure seamless collaboration across engineering teams.
-          </li>
-        </ul>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">Kubernetes</span>
-          <span class="badge">Docker</span>
-          <span class="badge">FastAPI</span>
-          <span class="badge">CI/CD</span>
-          <span class="badge">Redis</span>
-          <span class="badge">Prometheus</span>
-          <span class="badge">ELK Stack</span>
-          <span class="badge">PostgreSQL</span>
-        </div>
-      </article>
-
-      <!-- Role 2: Chabahar Maritime University -->
-      <article class="system-card space-y-3">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <div>
-            <h3 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
-              <span>Backend Developer</span>
-              <span class="text-emerald-400 font-medium">@ Chabahar Maritime University</span>
-            </h3>
-            <p class="text-xs font-mono text-slate-400">Chabahar, Iran</p>
-          </div>
-          <span class="badge shrink-0 font-mono">
-            Jan 2023 – Aug 2024
-          </span>
-        </div>
-
-        <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
-          <li>
-            Developed enterprise booking, course scheduling, and CRM workflows using <strong>Django REST Framework</strong> with role-based permission tiers.
-          </li>
-          <li>
-            Integrated secure payment gateways via asynchronous Webhook listeners and built a ticketing system; prevented race-condition double-booking using <strong>PostgreSQL transactional isolation</strong>.
-          </li>
-          <li>
-            Boosted database throughput by <strong>25%</strong> through schema re-indexing, query optimization, and localized Redis caching layers.
-          </li>
-          <li>
-            Documented all API endpoints with <strong>Swagger OpenAPI</strong> and published onboarding guides for frontend development teams.
-          </li>
-        </ul>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">Django REST</span>
-          <span class="badge">PostgreSQL</span>
-          <span class="badge">Webhooks</span>
-          <span class="badge">Transactional Concurrency</span>
-          <span class="badge">Swagger</span>
-        </div>
-      </article>
-
-      <!-- Role 3: Python Programming Instructor -->
-      <article class="system-card space-y-2.5">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <div>
-            <h3 class="text-sm font-bold text-white tracking-tight">
-              Python Programming Instructor
-            </h3>
-            <p class="text-xs font-mono text-slate-400">AshtangaYogaHome (Finland) & Chabahar University</p>
-          </div>
-          <span class="badge shrink-0 font-mono">
-            2024 – 2025
-          </span>
-        </div>
-
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Conducted university coursework and international mentorship on Python programming, algorithm design, memory management, and object-oriented architecture. Guided students through real-world automation scripts and backend web services.
-        </p>
-
-        <div class="flex flex-wrap gap-1.5 pt-0.5">
-          <span class="badge">Python</span>
-          <span class="badge">Algorithms & Data Structures</span>
-          <span class="badge">OOP Architecture</span>
-        </div>
-      </article>
-    </section>
-
-    <!-- 02. HONORS & ACCOLADES -->
-    <section id="honors" class="space-y-4">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="section-num" style="color: var(--accent-amber);">02</span>
-          <span>/ Honors & Accolades</span>
-        </h2>
-        <span class="text-xs font-mono text-amber-400">National Award</span>
-      </div>
-
-      <div class="system-card space-y-2 border-amber-500/25 bg-amber-500/5">
-        <div class="flex items-center justify-between flex-wrap gap-2">
-          <div class="flex items-center gap-2.5">
-            <span class="text-xl">🥈</span>
+      <div>
+        <!-- Role 1: MehrsunAi -->
+        <article class="item-row space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <div>
-              <h3 class="text-sm sm:text-base font-bold text-white tracking-tight">
-                Silver Medalist — National Innovation Award
+              <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight flex items-center gap-1.5 flex-wrap">
+                <span>Backend & DevOps Software Engineer</span>
+                <span class="text-sky-400 font-normal">@ MehrsunAi</span>
               </h3>
-              <p class="text-xs font-mono text-amber-300">Computer Science Category <span class="font-fa text-slate-400 font-normal">(مدال نقره جایزه ملی نوآوری)</span></p>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">Tehran, Iran · Hybrid</p>
             </div>
+            <span class="badge-chip badge-chip-amber shrink-0 font-mono">
+              Aug 2025 – Present
+            </span>
+          </div>
+
+          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
+            <li>
+              Designed and built scalable <strong>RESTful APIs</strong> secured with JWT/OAuth2, supporting thousands of concurrent users in production.
+            </li>
+            <li>
+              Automated multi-stage deployment pipelines using <strong>Docker, Kubernetes, and CI/CD</strong> (GitLab CI & GitHub Actions), reducing release turnaround time by <strong>40%</strong>.
+            </li>
+            <li>
+              Reduced API latency by <strong>30%</strong> through multi-level <strong>Redis caching</strong> architectures and complex SQL/ORM query optimizations.
+            </li>
+            <li>
+              Configured centralized logging with <strong>ELK stack</strong> and infrastructure observability via <strong>Prometheus & Grafana</strong> to maintain a strict <strong>99.9% uptime SLA</strong>.
+            </li>
+            <li>
+              Authored comprehensive OpenAPI/Swagger specifications and Postman collections to ensure seamless collaboration across engineering teams.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="badge-chip">Kubernetes</span>
+            <span class="badge-chip">Docker</span>
+            <span class="badge-chip">FastAPI</span>
+            <span class="badge-chip">CI/CD</span>
+            <span class="badge-chip">Redis</span>
+            <span class="badge-chip">Prometheus</span>
+            <span class="badge-chip">ELK Stack</span>
+            <span class="badge-chip">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- Role 2: Chabahar Maritime University -->
+        <article class="item-row space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <div>
+              <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight flex items-center gap-1.5 flex-wrap">
+                <span>Backend Developer</span>
+                <span class="text-emerald-400 font-normal">@ Chabahar Maritime University</span>
+              </h3>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">Chabahar, Iran</p>
+            </div>
+            <span class="badge-chip shrink-0 font-mono">
+              Jan 2023 – Aug 2024
+            </span>
+          </div>
+
+          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
+            <li>
+              Developed enterprise booking, course scheduling, and CRM workflows using <strong>Django REST Framework</strong> with role-based permission tiers.
+            </li>
+            <li>
+              Integrated secure payment gateways via asynchronous Webhook listeners and built a ticketing system; prevented race-condition double-booking using <strong>PostgreSQL transactional isolation</strong>.
+            </li>
+            <li>
+              Boosted database throughput by <strong>25%</strong> through schema re-indexing, query optimization, and localized Redis caching layers.
+            </li>
+            <li>
+              Documented all API endpoints with <strong>Swagger OpenAPI</strong> and published onboarding guides for frontend development teams.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="badge-chip">Django REST</span>
+            <span class="badge-chip">PostgreSQL</span>
+            <span class="badge-chip">Payment Webhooks</span>
+            <span class="badge-chip">Concurrency Isolation</span>
+            <span class="badge-chip">Swagger</span>
+          </div>
+        </article>
+
+        <!-- Role 3: Python Programming Instructor -->
+        <article class="item-row space-y-2.5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <div>
+              <h3 class="text-sm font-semibold text-zinc-100 tracking-tight">
+                Python Programming Instructor
+              </h3>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">AshtangaYogaHome (Finland) & Chabahar University</p>
+            </div>
+            <span class="badge-chip shrink-0 font-mono">
+              2024 – 2025
+            </span>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Conducted university coursework and international mentorship on Python programming, algorithm design, memory management, and object-oriented architecture. Guided students through real-world automation scripts and backend web services.
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 pt-0.5">
+            <span class="badge-chip">Python</span>
+            <span class="badge-chip">Algorithms & Data Structures</span>
+            <span class="badge-chip">OOP Architecture</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 02: RECOGNITION & HONORS -->
+    <section id="honors" class="screen-line-b">
+      <div class="panel-header">
+        <h2 class="panel-title">Honors & Accolades</h2>
+        <span class="panel-meta" style="color: var(--accent-amber);">National Award</span>
+      </div>
+
+      <div class="p-5 space-y-2 bg-amber-500/5">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🥈</span>
+          <div>
+            <h3 class="text-sm font-bold text-zinc-100 tracking-tight">
+              Silver Medalist — National Innovation Award
+            </h3>
+            <p class="text-xs font-mono text-amber-300">Computer Science Category <span class="font-fa text-zinc-400 font-normal">(مدال نقره جایزه ملی نوآوری)</span></p>
           </div>
         </div>
 
-        <p class="text-xs text-slate-300 leading-relaxed pt-1">
+        <p class="text-xs text-zinc-300 leading-relaxed pt-1">
           Awarded national silver medal for exceptional computational problem-solving, algorithmic efficiency, and software architecture innovation in national computing challenges.
         </p>
       </div>
     </section>
 
-    <!-- 03. FEATURED SYSTEMS & SOFTWARE -->
-    <section id="systems" class="space-y-4">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="section-num">03</span>
-          <span>/ Featured Engineering Systems</span>
-        </h2>
-        <span class="text-xs font-mono text-slate-500">6 Verified Architectures</span>
+    <!-- SECTION 03: FEATURED SYSTEMS & SOFTWARE -->
+    <section id="systems" class="screen-line-b">
+      <div class="panel-header">
+        <h2 class="panel-title">Featured Engineering Systems</h2>
+        <span class="panel-meta">6 Production Architectures</span>
       </div>
 
-      <!-- 1. Oxiroute (Flagship System) -->
-      <div class="system-card space-y-3 border-sky-500/20 hover:border-sky-500/40">
-        <div class="flex items-start justify-between flex-wrap gap-2">
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <h3 class="text-base font-bold text-white tracking-tight">
-                Oxiroute
-              </h3>
-              <span class="badge badge-sky">Rust</span>
-              <span class="badge badge-emerald">&lt;10MB RSS</span>
+      <div>
+        <!-- 1. Oxiroute -->
+        <article class="item-row space-y-2.5">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
+                  Oxiroute
+                </h3>
+                <span class="badge-chip badge-chip-sky">Rust</span>
+                <span class="badge-chip">&lt;10MB RSS</span>
+                <span class="badge-chip">Zero-Copy SSE</span>
+              </div>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">High-Throughput Production AI Gateway & LLM Router</p>
             </div>
-            <p class="text-xs font-mono text-slate-400 mt-0.5">High-Throughput Production AI Gateway & LLM Router</p>
-          </div>
 
-          <a href="https://github.com/pyr0ken/oxiroute" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1 group">
-            <span>github.com/pyr0ken/oxiroute</span>
-            <span class="group-hover:translate-x-0.5 transition">→</span>
-          </a>
-        </div>
-
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming via Axum and Tokio runtime, 3-tier resilience fallback cascades, SOCKS5 upstream proxy tunneling, token compaction, and an interactive Ratatui TUI dashboard. Engineered for sub-millisecond overhead and strict memory constraints.
-        </p>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">Axum</span>
-          <span class="badge">Tokio</span>
-          <span class="badge">Zero-Copy SSE</span>
-          <span class="badge">SOCKS5</span>
-          <span class="badge">Ratatui TUI</span>
-        </div>
-      </div>
-
-      <!-- 2. Khales -->
-      <div class="system-card space-y-3">
-        <div class="flex items-start justify-between flex-wrap gap-2">
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <h3 class="text-base font-bold text-white tracking-tight">
-                Khales <span class="font-fa text-xs font-normal text-slate-400">(خالص)</span>
-              </h3>
-              <span class="badge">Kotlin · Android</span>
-              <span class="badge badge-emerald">AES-256</span>
-            </div>
-            <p class="text-xs font-mono text-slate-400 mt-0.5">Privacy-First Offline Personal Finance Application</p>
-          </div>
-
-          <a href="https://github.com/pyr0ken/khales" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1 group">
-            <span>github.com/pyr0ken/khales</span>
-            <span class="group-hover:translate-x-0.5 transition">→</span>
-          </a>
-        </div>
-
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Android personal finance application built with Jetpack Compose Material 3 and Room database. Parses incoming Iranian bank SMS notifications 100% offline with zero cloud telemetry using deterministic regex matching. Backed by SQLCipher AES-256 zero-knowledge on-device encryption.
-        </p>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">Compose M3</span>
-          <span class="badge">Room DB</span>
-          <span class="badge">SQLCipher (AES-256)</span>
-          <span class="badge">Zero Cloud / 100% Offline</span>
-        </div>
-      </div>
-
-      <!-- 3. Autonomous AI Trading Platform -->
-      <div class="system-card space-y-3">
-        <div class="flex items-start justify-between flex-wrap gap-2">
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <h3 class="text-base font-bold text-white tracking-tight">
-                Autonomous AI Trading Platform
-              </h3>
-              <span class="badge">Python · FastAPI</span>
-            </div>
-            <p class="text-xs font-mono text-slate-400 mt-0.5">Pure Python ReAct Agent Core with Asynchronous Telemetry</p>
-          </div>
-
-          <a href="https://github.com/pyr0ken/ai-trading-platform" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1 group">
-            <span>github.com/pyr0ken/ai-trading-platform</span>
-            <span class="group-hover:translate-x-0.5 transition">→</span>
-          </a>
-        </div>
-
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Algorithmic trading engine with pure Python ReAct reasoning core, 3-tier memory management (Short-term, Episodic, Playbooks), FastAPI asynchronous orderbook streaming, and TradingView Lightweight Charts with AI Canvas overlays.
-        </p>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">FastAPI</span>
-          <span class="badge">ReAct Loop</span>
-          <span class="badge">Lightweight Charts</span>
-          <span class="badge">Next.js</span>
-        </div>
-      </div>
-
-      <!-- 4. Golestan Client & VahedYar -->
-      <div class="system-card space-y-3">
-        <div class="flex items-start justify-between flex-wrap gap-2">
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <h3 class="text-base font-bold text-white tracking-tight">
-                Golestan Automation & VahedYar
-              </h3>
-              <span class="badge">Reverse Eng</span>
-              <span class="badge badge-emerald">Production Web</span>
-            </div>
-            <p class="text-xs font-mono text-slate-400 mt-0.5">High-Speed Reverse-Engineered Client & SQLite FTS5 Search</p>
-          </div>
-
-          <div class="flex items-center gap-3 text-xs font-mono">
-            <a href="https://vahedyar.vercel.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
-              <span>vahedyar.vercel.app</span>
-              <span>↗</span>
-            </a>
-            <a href="https://github.com/pyr0ken/golestan-automation" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
-              <span>Source</span>
-              <span>→</span>
+            <a href="https://github.com/pyr0ken/oxiroute" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
+              <span>Source ↗</span>
             </a>
           </div>
-        </div>
 
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Lightweight, pure-HTTP reverse-engineered client for the nationwide university portal (Golestan). Bypasses legacy ASP/ActiveX bottlenecks with an async scraping pipeline, SQLite full-text search index (FTS5), Typer CLI, and a production web SPA on Vercel.
-        </p>
-
-        <div class="flex flex-wrap gap-1.5 pt-1">
-          <span class="badge">SQLite FTS5</span>
-          <span class="badge">FastAPI</span>
-          <span class="badge">Typer CLI</span>
-          <span class="badge">Vercel SPA</span>
-        </div>
-      </div>
-
-      <!-- 5. Mavis & KiasmaX (Two compact cards) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <!-- Mavis -->
-        <div class="system-card space-y-2 mb-0">
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-bold text-white">Mavis Desktop HUD</h3>
-            <a href="https://github.com/pyr0ken/mavis" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold">GitHub →</a>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Wayland Linux floating notch & dynamic island desktop assistant built with Tauri 2.0, Rust, and React. Integrates low-latency audio visualization and hotkeys.
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming via Axum and Tokio runtime, 3-tier resilience fallback cascades, SOCKS5 upstream proxy tunneling, token compaction, and an interactive Ratatui TUI dashboard. Engineered for sub-millisecond overhead and strict memory constraints.
           </p>
-          <div class="flex flex-wrap gap-1 pt-1">
-            <span class="badge">Tauri 2.0</span>
-            <span class="badge">Rust</span>
-            <span class="badge">Wayland</span>
-          </div>
-        </div>
 
-        <!-- KiasmaX -->
-        <div class="system-card space-y-2 mb-0">
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-bold text-white">KiasmaX 3D WebGL</h3>
-            <a href="https://github.com/pyr0ken/kiasmax-website" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold">GitHub →</a>
+          <div class="flex flex-wrap gap-1.5 pt-0.5">
+            <span class="badge-chip">Axum</span>
+            <span class="badge-chip">Tokio</span>
+            <span class="badge-chip">SOCKS5</span>
+            <span class="badge-chip">Token Compactor</span>
+            <span class="badge-chip">Ratatui TUI</span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
+        </article>
+
+        <!-- 2. Khales -->
+        <article class="item-row space-y-2.5">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
+                  Khales <span class="font-fa text-xs font-normal text-zinc-400">(خالص)</span>
+                </h3>
+                <span class="badge-chip">Kotlin</span>
+                <span class="badge-chip">Android M3</span>
+                <span class="badge-chip">AES-256</span>
+              </div>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">Privacy-First Offline Personal Finance Application</p>
+            </div>
+
+            <a href="https://github.com/pyr0ken/khales" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
+              <span>Source ↗</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Android personal finance application built with Jetpack Compose Material 3 and Room database. Parses incoming Iranian bank SMS notifications 100% offline with zero cloud telemetry using deterministic regex matching. Backed by SQLCipher AES-256 zero-knowledge on-device encryption.
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 pt-0.5">
+            <span class="badge-chip">Compose M3</span>
+            <span class="badge-chip">Room DB</span>
+            <span class="badge-chip">SQLCipher (AES-256)</span>
+            <span class="badge-chip">Zero Cloud</span>
+          </div>
+        </article>
+
+        <!-- 3. AI Trading Platform -->
+        <article class="item-row space-y-2.5">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
+                  Autonomous AI Trading Platform
+                </h3>
+                <span class="badge-chip">Python</span>
+                <span class="badge-chip">FastAPI</span>
+                <span class="badge-chip">ReAct Loops</span>
+              </div>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">Pure Python ReAct Agent Core with Asynchronous Telemetry</p>
+            </div>
+
+            <a href="https://github.com/pyr0ken/ai-trading-platform" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
+              <span>Source ↗</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Algorithmic trading engine with pure Python ReAct reasoning core, 3-tier memory management (Short-term, Episodic, Playbooks), FastAPI asynchronous orderbook streaming, and TradingView Lightweight Charts with AI Canvas overlays.
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 pt-0.5">
+            <span class="badge-chip">FastAPI</span>
+            <span class="badge-chip">ReAct Loop</span>
+            <span class="badge-chip">Lightweight Charts</span>
+            <span class="badge-chip">Next.js</span>
+          </div>
+        </article>
+
+        <!-- 4. Golestan Client & VahedYar -->
+        <article class="item-row space-y-2.5">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
+                  Golestan Automation & VahedYar
+                </h3>
+                <span class="badge-chip">Reverse Eng</span>
+                <span class="badge-chip">SQLite FTS5</span>
+              </div>
+              <p class="text-xs font-mono text-zinc-400 mt-0.5">High-Speed Reverse-Engineered Client & Full-Text Search</p>
+            </div>
+
+            <div class="flex items-center gap-2.5 text-xs font-mono">
+              <a href="https://vahedyar.vercel.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-0.5">
+                <span>Live App ↗</span>
+              </a>
+              <a href="https://github.com/pyr0ken/golestan-automation" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium flex items-center gap-0.5">
+                <span>Source ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Lightweight, pure-HTTP reverse-engineered client for the nationwide university portal (Golestan). Bypasses legacy ASP/ActiveX bottlenecks with an async scraping pipeline, SQLite full-text search index (FTS5), Typer CLI, and a production web SPA on Vercel.
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 pt-0.5">
+            <span class="badge-chip">SQLite FTS5</span>
+            <span class="badge-chip">FastAPI</span>
+            <span class="badge-chip">Typer CLI</span>
+            <span class="badge-chip">Vercel SPA</span>
+          </div>
+        </article>
+
+        <!-- 5. Mavis Desktop HUD -->
+        <article class="item-row space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <h3 class="text-sm font-semibold text-zinc-100">Mavis Desktop HUD</h3>
+              <span class="badge-chip">Tauri 2.0</span>
+              <span class="badge-chip">Rust</span>
+              <span class="badge-chip">Wayland</span>
+            </div>
+            <a href="https://github.com/pyr0ken/mavis" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium">Source ↗</a>
+          </div>
+          <p class="text-xs text-zinc-300 leading-relaxed">
+            Wayland Linux floating notch & dynamic island desktop assistant built with Tauri 2.0, Rust, and React. Integrates low-latency audio visualization and hardware hotkey dispatching.
+          </p>
+        </article>
+
+        <!-- 6. KiasmaX 3D Experience -->
+        <article class="item-row space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <h3 class="text-sm font-semibold text-zinc-100">KiasmaX Cyber-Minimalist Experience</h3>
+              <span class="badge-chip">Three.js</span>
+              <span class="badge-chip">WebGL</span>
+              <span class="badge-chip">Next.js 15</span>
+            </div>
+            <a href="https://github.com/pyr0ken/kiasmax-website" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium">Source ↗</a>
+          </div>
+          <p class="text-xs text-zinc-300 leading-relaxed">
             Ultra-premium 60FPS scroll-driven experience showcasing Vision-Language models with WebGL shader passes, Three.js canvas, and Lenis scroll kinematics.
           </p>
-          <div class="flex flex-wrap gap-1 pt-1">
-            <span class="badge">Three.js</span>
-            <span class="badge">GLSL Shaders</span>
-            <span class="badge">Next.js 15</span>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- 04. EDUCATION -->
-    <section id="education" class="space-y-4">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="section-num">04</span>
-          <span>/ Education</span>
-        </h2>
-        <span class="text-xs font-mono text-slate-500">Undergraduate</span>
+    <!-- SECTION 04: EDUCATION -->
+    <section id="education" class="screen-line-b">
+      <div class="panel-header">
+        <h2 class="panel-title">Education</h2>
+        <span class="panel-meta">Undergraduate Degree</span>
       </div>
 
-      <div class="system-card space-y-1.5">
+      <div class="p-5 space-y-1.5">
         <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <h3 class="text-sm sm:text-base font-semibold text-white tracking-tight">
+          <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
             B.Sc. in Computer Engineering
           </h3>
-          <span class="text-xs font-mono text-slate-500">2022 – Present</span>
+          <span class="text-xs font-mono text-zinc-500">2022 – Present</span>
         </div>
         <p class="text-xs font-mono text-sky-400">
-          Kharazmi University <span class="font-fa text-slate-400 font-normal">(دانشگاه خوارزمی)</span> <span class="text-slate-600">·</span> Tehran, Iran
+          Kharazmi University <span class="font-fa text-zinc-400 font-normal">(دانشگاه خوارزمی)</span> <span class="text-zinc-600">·</span> Tehran, Iran
         </p>
-        <p class="text-xs text-slate-300 pt-1 leading-relaxed">
+        <p class="text-xs text-zinc-300 pt-1 leading-relaxed">
           Coursework & practical focus in Operating Systems, Distributed Systems, Computer Networks, Compilers, and Algorithm Analysis.
         </p>
       </div>
     </section>
 
-    <!-- 05. TECHNICAL INDEX -->
-    <section id="stack" class="space-y-4">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="section-num">05</span>
-          <span>/ Technical Index</span>
-        </h2>
-        <span class="text-xs font-mono text-slate-500">Core Architecture</span>
+    <!-- SECTION 05: TECHNICAL INDEX -->
+    <section id="stack" class="screen-line-b">
+      <div class="panel-header">
+        <h2 class="panel-title">Technical Index</h2>
+        <span class="panel-meta">Core Stack</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div class="system-card space-y-2 mb-0">
-          <span class="text-slate-400 font-semibold block text-[11px] font-mono uppercase tracking-wide">Backend & Cloud</span>
+      <div class="p-5 space-y-4 text-xs font-mono">
+        <div class="space-y-1.5">
+          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Backend & Cloud</span>
           <div class="flex flex-wrap gap-1.5">
-            <span class="badge">Rust (Axum, Tokio)</span>
-            <span class="badge">Python (FastAPI, Django)</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Kubernetes</span>
-            <span class="badge">CI/CD Pipelines</span>
-            <span class="badge">Celery</span>
-            <span class="badge">RabbitMQ</span>
+            <span class="badge-chip">Rust (Axum, Tokio)</span>
+            <span class="badge-chip">Python (FastAPI, Django)</span>
+            <span class="badge-chip">Docker</span>
+            <span class="badge-chip">Kubernetes</span>
+            <span class="badge-chip">CI/CD Pipelines</span>
+            <span class="badge-chip">Celery</span>
+            <span class="badge-chip">RabbitMQ</span>
           </div>
         </div>
 
-        <div class="system-card space-y-2 mb-0">
-          <span class="text-slate-400 font-semibold block text-[11px] font-mono uppercase tracking-wide">Observability & Storage</span>
+        <div class="space-y-1.5">
+          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Observability & Storage</span>
           <div class="flex flex-wrap gap-1.5">
-            <span class="badge">Prometheus</span>
-            <span class="badge">Grafana</span>
-            <span class="badge">ELK Stack</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">Redis (Streams/Cache)</span>
-            <span class="badge">SQLite (FTS5)</span>
-            <span class="badge">SQLCipher (AES-256)</span>
+            <span class="badge-chip">Prometheus</span>
+            <span class="badge-chip">Grafana</span>
+            <span class="badge-chip">ELK Stack</span>
+            <span class="badge-chip">PostgreSQL</span>
+            <span class="badge-chip">Redis (Streams/Cache)</span>
+            <span class="badge-chip">SQLite (FTS5)</span>
+            <span class="badge-chip">SQLCipher (AES-256)</span>
           </div>
         </div>
 
-        <div class="system-card space-y-2 mb-0">
-          <span class="text-slate-400 font-semibold block text-[11px] font-mono uppercase tracking-wide">Networking & Security</span>
+        <div class="space-y-1.5">
+          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Networking & Security</span>
           <div class="flex flex-wrap gap-1.5">
-            <span class="badge">Zero-Copy SSE</span>
-            <span class="badge">SOCKS5 Tunnels</span>
-            <span class="badge">Cloudflare Pro Edge</span>
-            <span class="badge">TLS 1.3 Termination</span>
-            <span class="badge">JWT/OAuth2</span>
+            <span class="badge-chip">Zero-Copy SSE</span>
+            <span class="badge-chip">SOCKS5 Tunnels</span>
+            <span class="badge-chip">Cloudflare Pro Edge</span>
+            <span class="badge-chip">TLS 1.3 Termination</span>
+            <span class="badge-chip">JWT/OAuth2</span>
           </div>
         </div>
 
-        <div class="system-card space-y-2 mb-0">
-          <span class="text-slate-400 font-semibold block text-[11px] font-mono uppercase tracking-wide">Frontend & Mobile</span>
+        <div class="space-y-1.5">
+          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Frontend & Mobile</span>
           <div class="flex flex-wrap gap-1.5">
-            <span class="badge">TypeScript</span>
-            <span class="badge">React 19</span>
-            <span class="badge">Next.js 15</span>
-            <span class="badge">Kotlin (Compose M3)</span>
-            <span class="badge">Three.js (WebGL)</span>
-            <span class="badge">Tailwind CSS</span>
+            <span class="badge-chip">TypeScript</span>
+            <span class="badge-chip">React 19</span>
+            <span class="badge-chip">Next.js 15</span>
+            <span class="badge-chip">Kotlin (Compose M3)</span>
+            <span class="badge-chip">Three.js (WebGL)</span>
+            <span class="badge-chip">Tailwind CSS</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/10 pt-8 pb-4 text-xs font-mono text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4 no-print">
+    <footer class="p-5 text-xs font-mono text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-3 no-print">
       <div>
-        © 2026 Mohammad Hossein Yaghobi. Hosted on <a href="https://pyr0ken.ir" class="text-slate-400 hover:text-white transition">pyr0ken.ir</a>.
+        © 2026 Mohammad Hossein Yaghobi. Hosted on <a href="https://pyr0ken.ir" class="text-zinc-400 hover:text-white transition">pyr0ken.ir</a>.
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">LinkedIn</a>
-        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">GitHub</a>
-        <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="hover:text-slate-300 transition cursor-pointer">Email</button>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-slate-300 transition cursor-pointer">Back to Top ↑</button>
+        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition">LinkedIn</a>
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition">GitHub</a>
+        <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="hover:text-zinc-300 transition cursor-pointer">Email</button>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-zinc-300 transition cursor-pointer">Back to Top ↑</button>
       </div>
     </footer>
 
-  </main>
+  </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg bg-slate-900 border border-sky-500/40 text-white text-xs font-mono shadow-2xl transform translate-y-16 opacity-0 transition-all duration-200 flex items-center gap-2 pointer-events-none" role="status">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg bg-zinc-900 border border-sky-500/40 text-white text-xs font-mono shadow-2xl transform translate-y-16 opacity-0 transition-all duration-200 flex items-center gap-2 pointer-events-none" role="status">
     <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
     </svg>
