@@ -1,830 +1,525 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Hossein Yaghobi (pyr0ken) — Systems & DevOps Engineer</title>
-  <meta name="description" content="Personal Portfolio & Engineering CV of Mohammad Hossein Yaghobi (pyr0ken). Backend & DevOps Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award.">
-  <link rel="canonical" href="https://pyr0ken.ir/">
+  <title>hello_world("print") — pyr0ken</title>
+  <meta name="description" content="hello_world('print') — Inverting the paradigm. Minimalist developer playground and corner of Mohammad Hossein Yaghobi (pyr0ken).">
+  <link rel="canonical" href="https://pyr0ken.github.io/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="alternate icon" href="https://avatars.githubusercontent.com/u/126270229?v=4" type="image/png">
 
-  <!-- OpenGraph Metadata -->
+  <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pyr0ken.ir/">
-  <meta property="og:title" content="Mohammad Hossein Yaghobi (pyr0ken) — Systems & DevOps Engineer">
-  <meta property="og:description" content="Backend & DevOps Software Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award. Kharazmi Computer Engineering.">
+  <meta property="og:url" content="https://pyr0ken.github.io/">
+  <meta property="og:title" content="hello_world(&quot;print&quot;) — pyr0ken">
+  <meta property="og:description" content="Inverting standard output. Systems, Rust, Arch Linux, and quiet engineering.">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/126270229?v=4">
 
-  <!-- Twitter Metadata -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://pyr0ken.ir/">
-  <meta name="twitter:title" content="Mohammad Hossein Yaghobi (pyr0ken) — Systems & DevOps Engineer">
-  <meta name="twitter:description" content="Backend & DevOps Software Engineer at MehrsunAi, Systems Architect, Silver Medalist at National Innovation Award.">
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/126270229?v=4">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="hello_world(&quot;print&quot;) — pyr0ken">
+  <meta name="twitter:description" content="Inverting standard output. Systems, Rust, Arch Linux, and quiet engineering.">
 
-  <!-- Official Geist Typography (The Chanh Dai / Vercel Font Stack) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mohammad Hossein Yaghobi",
-    "alternateName": "pyr0ken",
-    "url": "https://pyr0ken.ir",
-    "image": "https://avatars.githubusercontent.com/u/126270229?v=4",
-    "jobTitle": "Backend & DevOps Software Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "MehrsunAi"
-    },
-    "alumnusOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Kharazmi University"
-    },
-    "award": "Silver Medalist, National Innovation Award (Computer Science)",
-    "sameAs": [
-      "https://github.com/pyr0ken",
-      "https://www.linkedin.com/in/mohammad-hossein-yaghoubi/"
-    ],
-    "knowsAbout": [
-      "Rust",
-      "DevOps",
-      "Kubernetes",
-      "Docker",
-      "FastAPI",
-      "Django REST Framework",
-      "CI/CD",
-      "Prometheus",
-      "Grafana",
-      "ELK Stack",
-      "Kotlin Android",
-      "Python"
-    ]
-  }
-  </script>
-
-  <!-- Offline Tailwind CSS Base -->
   <link rel="stylesheet" href="./style.css">
-
-  <style>
-    /* Chanh Dai / Shadcn Zinc Pixel-Perfect Design System */
-    :root {
-      --bg: #09090b;
-      --foreground: #fafafa;
-      --muted: #18181b;
-      --muted-foreground: #a1a1aa;
-      --subtle: #71717a;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-hover: rgba(255, 255, 255, 0.16);
-      --card-bg: rgba(24, 24, 27, 0.4);
-      --card-hover: rgba(39, 39, 42, 0.5);
-      --accent: #38bdf8;
-      --accent-amber: #f59e0b;
-      --accent-emerald: #10b981;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--muted-foreground);
-      font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
-    }
-
-    code, pre, .font-mono {
-      font-family: 'Geist Mono', monospace;
-    }
-
-    .font-fa {
-      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #27272a;
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #3f3f46;
-    }
-
-    /* Pixel-Perfect Magazine Document Shell (Centered & Framed) */
-    .document-frame {
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-      border-left: 1px solid var(--line);
-      border-right: 1px solid var(--line);
-      background-color: rgba(9, 9, 11, 0.6);
-      min-height: 100vh;
-    }
-
-    /* Hairline Dividers (screen-line) */
-    .screen-line-b {
-      border-bottom: 1px solid var(--line);
-    }
-    .screen-line-t {
-      border-top: 1px solid var(--line);
-    }
-
-    /* Navigation Layout */
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 3.5rem;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-    .nav-items {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-    .nav-link {
-      font-family: 'Geist Mono', monospace;
-      font-size: 0.8125rem;
-      color: var(--muted-foreground);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-    .nav-link:hover {
-      color: var(--foreground);
-    }
-
-    /* Panel Headers */
-    .panel-header {
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(24, 24, 27, 0.2);
-      border-bottom: 1px solid var(--line);
-    }
-    .panel-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: var(--foreground);
-    }
-    .panel-meta {
-      font-family: 'Geist Mono', monospace;
-      font-size: 0.6875rem;
-      color: var(--subtle);
-    }
-
-    /* Panel Content Padding */
-    .panel-content {
-      padding: 1.25rem;
-    }
-
-    /* Chanh Dai / Shadcn Interactive Items */
-    .item-row {
-      padding: 1.125rem 1.25rem;
-      border-bottom: 1px solid var(--line);
-      transition: background-color 0.15s ease;
-    }
-    .item-row:last-child {
-      border-bottom: none;
-    }
-    .item-row:hover {
-      background-color: var(--card-bg);
-    }
-
-    /* Subtle Badge Component */
-    .badge-chip {
-      font-family: 'Geist Mono', monospace;
-      font-size: 0.6875rem;
-      font-weight: 500;
-      padding: 2px 7px;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.04);
-      color: #d4d4d8;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      line-height: 1.3;
-    }
-    .badge-chip-amber {
-      background: rgba(245, 158, 11, 0.08);
-      color: #fcd34d;
-      border-color: rgba(245, 158, 11, 0.2);
-    }
-    .badge-chip-sky {
-      background: rgba(56, 189, 248, 0.08);
-      color: #7dd3fc;
-      border-color: rgba(56, 189, 248, 0.2);
-    }
-
-    /* Print CV */
-    @media print {
-      body {
-        background: #ffffff !important;
-        color: #09090b !important;
-        font-size: 10pt !important;
-      }
-      .no-print {
-        display: none !important;
-      }
-      .document-frame {
-        max-width: 100% !important;
-        border: none !important;
-        background: none !important;
-      }
-      .screen-line-b, .screen-line-t, .item-row {
-        border-color: #e4e4e7 !important;
-      }
-      .badge-chip {
-        background: #f4f4f5 !important;
-        color: #27272a !important;
-        border-color: #e4e4e7 !important;
-      }
-      .text-white, h1, h2, h3, h4 {
-        color: #09090b !important;
-      }
-      p, li {
-        color: #27272a !important;
-      }
-      a {
-        color: #0284c7 !important;
-        text-decoration: underline !important;
-      }
-    }
-  </style>
 </head>
-<body class="selection:bg-zinc-800 selection:text-white">
+<body>
+  <!-- Ambient background lighting -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
 
-  <!-- Document Column Shell (Chanh Dai Magazine / Framed Layout) -->
-  <div class="document-frame">
-
-    <!-- Top Sticky Header -->
-    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-zinc-950/85 screen-line-b no-print">
-      <div class="nav-bar">
-        <div class="flex items-center gap-2.5">
-          <a href="#about" class="text-sm font-bold text-white tracking-tight hover:text-sky-400 transition flex items-center gap-2">
-            <span class="w-6 h-6 rounded bg-zinc-900 border border-zinc-700/60 flex items-center justify-center text-sky-400 text-xs font-mono font-bold">
-              &gt;_
-            </span>
-            <span>pyr0ken.ir</span>
-          </a>
+  <main class="playground-container">
+    <!-- Top Identity Bar -->
+    <header class="top-nav">
+      <div class="brand">
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="avatar-link" title="pyr0ken on GitHub">
+          <div class="avatar-monogram">p</div>
+        </a>
+        <div class="brand-text">
+          <span class="brand-name">pyr0ken</span>
+          <span class="brand-role">systems · arch · rust</span>
         </div>
+      </div>
 
-        <nav class="nav-items">
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#systems" class="nav-link">Systems</a>
-          <a href="#honors" class="nav-link hidden sm:inline">Honors</a>
-          <a href="#stack" class="nav-link hidden sm:inline">Stack</a>
+      <div class="nav-controls">
+        <button id="soundToggle" class="pill-btn" type="button" title="Toggle mechanical audio clicks">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path id="soundWave1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path id="soundWave2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <span id="soundLabel">sound on</span>
+        </button>
 
-          <div style="width: 1px; height: 14px; background: rgba(255, 255, 255, 0.12);"></div>
-
-          <button onclick="window.print()" class="nav-link flex items-center gap-1.5 cursor-pointer text-zinc-300 hover:text-white" title="Print Clean CV">
-            <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4" />
-            </svg>
-            <span>CV Print</span>
-          </button>
-        </nav>
+        <div class="status-pill" title="Status: online & compiling">
+          <span class="status-dot"></span>
+          <span>online</span>
+        </div>
       </div>
     </header>
 
-    <!-- SECTION 00: IDENTITY & PROFILE HEADER (Pixel-Perfect Clean) -->
-    <section id="about" class="screen-line-b p-5 sm:p-7 space-y-5">
-      <div class="space-y-2">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="text-xs font-mono text-emerald-400 font-medium">Backend & DevOps Engineer @ MehrsunAi</span>
+    <!-- Main Card: Terminal / Code Capsule -->
+    <section class="code-card">
+      <div class="card-header">
+        <div class="window-controls" aria-hidden="true">
+          <span class="dot close"></span>
+          <span class="dot minimize"></span>
+          <span class="dot expand"></span>
         </div>
-
-        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100">
-          Mohammad Hossein Yaghobi
-        </h1>
-
-        <p class="text-xs sm:text-sm font-mono text-zinc-400">
-          Systems & Infrastructure Architect <span class="text-zinc-600">/</span> Kharazmi Computer Engineering
-        </p>
-      </div>
-
-      <!-- Concise Professional Bio -->
-      <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-        Architecting high-concurrency RESTful microservices, zero-copy network gateways, automated Kubernetes/Docker pipelines, and offline cryptography. Focused on deterministic execution, memory-constrained footprints (<code class="text-sky-300 text-[11px] font-mono">&lt;10MB RSS</code>), and 99.9% uptime SLA.
-      </p>
-
-      <!-- Overview Metadata Grid (Chanh Dai Style) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs font-mono">
-        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
-          <span>🥈</span>
-          <span>Silver Medalist — National Innovation Award</span>
+        <div class="file-tab">
+          <span class="file-icon">🐍</span>
+          <span class="file-name">hello_world.py</span>
+          <span class="dirty-marker">●</span>
         </div>
-        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
-          <span>📍</span>
-          <span>Tehran, Iran · Hybrid</span>
-        </div>
-        <div class="flex items-center gap-2 p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
-          <span>🎓</span>
-          <span>B.Sc. CE @ Kharazmi University</span>
-        </div>
-        <div class="flex items-center justify-between p-2 rounded bg-zinc-900/50 border border-zinc-800/60 text-zinc-300">
-          <span class="flex items-center gap-2">
-            <span>✉️</span>
-            <span>mmdhosein.yaghoubi@gmail.com</span>
-          </span>
-          <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="text-[10px] text-sky-400 hover:text-sky-300 cursor-pointer ml-1">Copy</button>
+        <div class="card-actions">
+          <button id="copyBtn" class="action-btn" type="button" title="Copy code snippet">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copyText">copy</span>
+          </button>
+          <button id="runBtn" class="run-btn" type="button" title="Execute hello_world('print') (Shortcut: Enter)">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Run</span>
+            <kbd>↵</kbd>
+          </button>
         </div>
       </div>
 
-      <!-- Quick Action Links -->
-      <div class="flex items-center gap-3 pt-1 text-xs font-mono">
-        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-medium">
-          <span>LinkedIn</span>
-          <span>↗</span>
-        </a>
-        <span class="text-zinc-700">·</span>
-        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-zinc-300 hover:text-white font-medium">
+      <!-- Code Block -->
+      <div class="code-body" id="codeSnippet" tabindex="0" role="button" aria-label="Click to run snippet">
+        <div class="line-numbers" aria-hidden="true">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+        </div>
+        <pre class="code-content"><code><span class="tok-comment"># inverting standard output</span>
+<span class="tok-keyword">def</span> <span class="tok-func">hello_world</span>(<span class="tok-param">action</span>: <span class="tok-type">str</span> = <span class="tok-str">"print"</span>):
+    <span class="tok-keyword">return</span> <span class="tok-func">print</span>(<span class="tok-str">"Hello, World!"</span>) <span class="tok-keyword">if</span> action == <span class="tok-str">"print"</span> <span class="tok-keyword">else</span> action
+
+<span class="tok-call">hello_world</span>(<span class="tok-str">"print"</span>)<span class="blinking-cursor"></span></code></pre>
+      </div>
+
+      <!-- Execution Console / Output Stream -->
+      <div class="terminal-shelf">
+        <div class="terminal-bar">
+          <div class="terminal-title">
+            <span class="term-prompt-symbol">❯_</span>
+            <span>stdout · interactive console</span>
+          </div>
+          <button id="clearBtn" class="clear-btn" type="button">clear</button>
+        </div>
+
+        <div class="terminal-feed" id="terminalFeed" role="log" aria-live="polite">
+          <!-- Terminal logs injected via JS -->
+        </div>
+
+        <!-- Interactive command prompt -->
+        <form id="cliForm" class="cli-input-row" autocomplete="off">
+          <label for="cliInput" class="cli-prompt">
+            <span class="cli-user">pyr0ken</span><span class="cli-at">@</span><span class="cli-host">arch</span>:<span class="cli-path">~</span>$
+          </label>
+          <input 
+            type="text" 
+            id="cliInput" 
+            class="cli-input" 
+            placeholder="type 'help', 'whoami', 'projects' or hit Enter..."
+            spellcheck="false"
+            autocomplete="off"
+            aria-label="Terminal command input"
+          />
+        </form>
+      </div>
+
+      <!-- Suggestion Chips -->
+      <div class="quick-chips">
+        <span class="chips-label">try:</span>
+        <button class="chip" data-cmd="hello_world(&quot;print&quot;)">hello_world("print")</button>
+        <button class="chip" data-cmd="whoami">whoami</button>
+        <button class="chip" data-cmd="projects">projects</button>
+        <button class="chip" data-cmd="flip">flip</button>
+        <button class="chip" data-cmd="matrix">matrix</button>
+        <button class="chip" data-cmd="easter">easter egg</button>
+      </div>
+    </section>
+
+    <!-- Bottom Footer -->
+    <footer class="footer-nav">
+      <div class="social-links">
+        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
           <span>GitHub</span>
-          <span>↗</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:mmdhosein.yaghoubi@gmail.com" class="footer-link">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Email</span>
         </a>
       </div>
-    </section>
 
-    <!-- SECTION 01: WORK EXPERIENCE -->
-    <section id="experience" class="screen-line-b">
-      <div class="panel-header">
-        <h2 class="panel-title">Experience</h2>
-        <span class="panel-meta">Production Roles · 2023 - Present</span>
-      </div>
-
-      <div>
-        <!-- Role 1: MehrsunAi -->
-        <article class="item-row space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <div>
-              <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight flex items-center gap-1.5 flex-wrap">
-                <span>Backend & DevOps Software Engineer</span>
-                <span class="text-sky-400 font-normal">@ MehrsunAi</span>
-              </h3>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">Tehran, Iran · Hybrid</p>
-            </div>
-            <span class="badge-chip badge-chip-amber shrink-0 font-mono">
-              Aug 2025 – Present
-            </span>
-          </div>
-
-          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
-            <li>
-              Designed and built scalable <strong>RESTful APIs</strong> secured with JWT/OAuth2, supporting thousands of concurrent users in production.
-            </li>
-            <li>
-              Automated multi-stage deployment pipelines using <strong>Docker, Kubernetes, and CI/CD</strong> (GitLab CI & GitHub Actions), reducing release turnaround time by <strong>40%</strong>.
-            </li>
-            <li>
-              Reduced API latency by <strong>30%</strong> through multi-level <strong>Redis caching</strong> architectures and complex SQL/ORM query optimizations.
-            </li>
-            <li>
-              Configured centralized logging with <strong>ELK stack</strong> and infrastructure observability via <strong>Prometheus & Grafana</strong> to maintain a strict <strong>99.9% uptime SLA</strong>.
-            </li>
-            <li>
-              Authored comprehensive OpenAPI/Swagger specifications and Postman collections to ensure seamless collaboration across engineering teams.
-            </li>
-          </ul>
-
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="badge-chip">Kubernetes</span>
-            <span class="badge-chip">Docker</span>
-            <span class="badge-chip">FastAPI</span>
-            <span class="badge-chip">CI/CD</span>
-            <span class="badge-chip">Redis</span>
-            <span class="badge-chip">Prometheus</span>
-            <span class="badge-chip">ELK Stack</span>
-            <span class="badge-chip">PostgreSQL</span>
-          </div>
-        </article>
-
-        <!-- Role 2: Chabahar Maritime University -->
-        <article class="item-row space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <div>
-              <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight flex items-center gap-1.5 flex-wrap">
-                <span>Backend Developer</span>
-                <span class="text-emerald-400 font-normal">@ Chabahar Maritime University</span>
-              </h3>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">Chabahar, Iran</p>
-            </div>
-            <span class="badge-chip shrink-0 font-mono">
-              Jan 2023 – Aug 2024
-            </span>
-          </div>
-
-          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-outside ml-4 leading-relaxed">
-            <li>
-              Developed enterprise booking, course scheduling, and CRM workflows using <strong>Django REST Framework</strong> with role-based permission tiers.
-            </li>
-            <li>
-              Integrated secure payment gateways via asynchronous Webhook listeners and built a ticketing system; prevented race-condition double-booking using <strong>PostgreSQL transactional isolation</strong>.
-            </li>
-            <li>
-              Boosted database throughput by <strong>25%</strong> through schema re-indexing, query optimization, and localized Redis caching layers.
-            </li>
-            <li>
-              Documented all API endpoints with <strong>Swagger OpenAPI</strong> and published onboarding guides for frontend development teams.
-            </li>
-          </ul>
-
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="badge-chip">Django REST</span>
-            <span class="badge-chip">PostgreSQL</span>
-            <span class="badge-chip">Payment Webhooks</span>
-            <span class="badge-chip">Concurrency Isolation</span>
-            <span class="badge-chip">Swagger</span>
-          </div>
-        </article>
-
-        <!-- Role 3: Python Programming Instructor -->
-        <article class="item-row space-y-2.5">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <div>
-              <h3 class="text-sm font-semibold text-zinc-100 tracking-tight">
-                Python Programming Instructor
-              </h3>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">AshtangaYogaHome (Finland) & Chabahar University</p>
-            </div>
-            <span class="badge-chip shrink-0 font-mono">
-              2024 – 2025
-            </span>
-          </div>
-
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Conducted university coursework and international mentorship on Python programming, algorithm design, memory management, and object-oriented architecture. Guided students through real-world automation scripts and backend web services.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 pt-0.5">
-            <span class="badge-chip">Python</span>
-            <span class="badge-chip">Algorithms & Data Structures</span>
-            <span class="badge-chip">OOP Architecture</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SECTION 02: RECOGNITION & HONORS -->
-    <section id="honors" class="screen-line-b">
-      <div class="panel-header">
-        <h2 class="panel-title">Honors & Accolades</h2>
-        <span class="panel-meta" style="color: var(--accent-amber);">National Award</span>
-      </div>
-
-      <div class="p-5 space-y-2 bg-amber-500/5">
-        <div class="flex items-center gap-2">
-          <span class="text-lg">🥈</span>
-          <div>
-            <h3 class="text-sm font-bold text-zinc-100 tracking-tight">
-              Silver Medalist — National Innovation Award
-            </h3>
-            <p class="text-xs font-mono text-amber-300">Computer Science Category <span class="font-fa text-zinc-400 font-normal">(مدال نقره جایزه ملی نوآوری)</span></p>
-          </div>
-        </div>
-
-        <p class="text-xs text-zinc-300 leading-relaxed pt-1">
-          Awarded national silver medal for exceptional computational problem-solving, algorithmic efficiency, and software architecture innovation in national computing challenges.
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION 03: FEATURED SYSTEMS & SOFTWARE -->
-    <section id="systems" class="screen-line-b">
-      <div class="panel-header">
-        <h2 class="panel-title">Featured Engineering Systems</h2>
-        <span class="panel-meta">6 Production Architectures</span>
-      </div>
-
-      <div>
-        <!-- 1. Oxiroute -->
-        <article class="item-row space-y-2.5">
-          <div class="flex items-start justify-between flex-wrap gap-2">
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
-                  Oxiroute
-                </h3>
-                <span class="badge-chip badge-chip-sky">Rust</span>
-                <span class="badge-chip">&lt;10MB RSS</span>
-                <span class="badge-chip">Zero-Copy SSE</span>
-              </div>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">High-Throughput Production AI Gateway & LLM Router</p>
-            </div>
-
-            <a href="https://github.com/pyr0ken/oxiroute" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
-              <span>Source ↗</span>
-            </a>
-          </div>
-
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Ultra-fast, lightweight production AI gateway and LLM router built in pure Rust. Features zero-copy Server-Sent Events (SSE) streaming via Axum and Tokio runtime, 3-tier resilience fallback cascades, SOCKS5 upstream proxy tunneling, token compaction, and an interactive Ratatui TUI dashboard. Engineered for sub-millisecond overhead and strict memory constraints.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 pt-0.5">
-            <span class="badge-chip">Axum</span>
-            <span class="badge-chip">Tokio</span>
-            <span class="badge-chip">SOCKS5</span>
-            <span class="badge-chip">Token Compactor</span>
-            <span class="badge-chip">Ratatui TUI</span>
-          </div>
-        </article>
-
-        <!-- 2. Khales -->
-        <article class="item-row space-y-2.5">
-          <div class="flex items-start justify-between flex-wrap gap-2">
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
-                  Khales <span class="font-fa text-xs font-normal text-zinc-400">(خالص)</span>
-                </h3>
-                <span class="badge-chip">Kotlin</span>
-                <span class="badge-chip">Android M3</span>
-                <span class="badge-chip">AES-256</span>
-              </div>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">Privacy-First Offline Personal Finance Application</p>
-            </div>
-
-            <a href="https://github.com/pyr0ken/khales" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
-              <span>Source ↗</span>
-            </a>
-          </div>
-
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Android personal finance application built with Jetpack Compose Material 3 and Room database. Parses incoming Iranian bank SMS notifications 100% offline with zero cloud telemetry using deterministic regex matching. Backed by SQLCipher AES-256 zero-knowledge on-device encryption.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 pt-0.5">
-            <span class="badge-chip">Compose M3</span>
-            <span class="badge-chip">Room DB</span>
-            <span class="badge-chip">SQLCipher (AES-256)</span>
-            <span class="badge-chip">Zero Cloud</span>
-          </div>
-        </article>
-
-        <!-- 3. AI Trading Platform -->
-        <article class="item-row space-y-2.5">
-          <div class="flex items-start justify-between flex-wrap gap-2">
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
-                  Autonomous AI Trading Platform
-                </h3>
-                <span class="badge-chip">Python</span>
-                <span class="badge-chip">FastAPI</span>
-                <span class="badge-chip">ReAct Loops</span>
-              </div>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">Pure Python ReAct Agent Core with Asynchronous Telemetry</p>
-            </div>
-
-            <a href="https://github.com/pyr0ken/ai-trading-platform" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium flex items-center gap-1">
-              <span>Source ↗</span>
-            </a>
-          </div>
-
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Algorithmic trading engine with pure Python ReAct reasoning core, 3-tier memory management (Short-term, Episodic, Playbooks), FastAPI asynchronous orderbook streaming, and TradingView Lightweight Charts with AI Canvas overlays.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 pt-0.5">
-            <span class="badge-chip">FastAPI</span>
-            <span class="badge-chip">ReAct Loop</span>
-            <span class="badge-chip">Lightweight Charts</span>
-            <span class="badge-chip">Next.js</span>
-          </div>
-        </article>
-
-        <!-- 4. Golestan Client & VahedYar -->
-        <article class="item-row space-y-2.5">
-          <div class="flex items-start justify-between flex-wrap gap-2">
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
-                  Golestan Automation & VahedYar
-                </h3>
-                <span class="badge-chip">Reverse Eng</span>
-                <span class="badge-chip">SQLite FTS5</span>
-              </div>
-              <p class="text-xs font-mono text-zinc-400 mt-0.5">High-Speed Reverse-Engineered Client & Full-Text Search</p>
-            </div>
-
-            <div class="flex items-center gap-2.5 text-xs font-mono">
-              <a href="https://vahedyar.vercel.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-0.5">
-                <span>Live App ↗</span>
-              </a>
-              <a href="https://github.com/pyr0ken/golestan-automation" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium flex items-center gap-0.5">
-                <span>Source ↗</span>
-              </a>
-            </div>
-          </div>
-
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Lightweight, pure-HTTP reverse-engineered client for the nationwide university portal (Golestan). Bypasses legacy ASP/ActiveX bottlenecks with an async scraping pipeline, SQLite full-text search index (FTS5), Typer CLI, and a production web SPA on Vercel.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 pt-0.5">
-            <span class="badge-chip">SQLite FTS5</span>
-            <span class="badge-chip">FastAPI</span>
-            <span class="badge-chip">Typer CLI</span>
-            <span class="badge-chip">Vercel SPA</span>
-          </div>
-        </article>
-
-        <!-- 5. Mavis Desktop HUD -->
-        <article class="item-row space-y-2">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <h3 class="text-sm font-semibold text-zinc-100">Mavis Desktop HUD</h3>
-              <span class="badge-chip">Tauri 2.0</span>
-              <span class="badge-chip">Rust</span>
-              <span class="badge-chip">Wayland</span>
-            </div>
-            <a href="https://github.com/pyr0ken/mavis" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium">Source ↗</a>
-          </div>
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Wayland Linux floating notch & dynamic island desktop assistant built with Tauri 2.0, Rust, and React. Integrates low-latency audio visualization and hardware hotkey dispatching.
-          </p>
-        </article>
-
-        <!-- 6. KiasmaX 3D Experience -->
-        <article class="item-row space-y-2">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <h3 class="text-sm font-semibold text-zinc-100">KiasmaX Cyber-Minimalist Experience</h3>
-              <span class="badge-chip">Three.js</span>
-              <span class="badge-chip">WebGL</span>
-              <span class="badge-chip">Next.js 15</span>
-            </div>
-            <a href="https://github.com/pyr0ken/kiasmax-website" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-medium">Source ↗</a>
-          </div>
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Ultra-premium 60FPS scroll-driven experience showcasing Vision-Language models with WebGL shader passes, Three.js canvas, and Lenis scroll kinematics.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- SECTION 04: EDUCATION -->
-    <section id="education" class="screen-line-b">
-      <div class="panel-header">
-        <h2 class="panel-title">Education</h2>
-        <span class="panel-meta">Undergraduate Degree</span>
-      </div>
-
-      <div class="p-5 space-y-1.5">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <h3 class="text-sm sm:text-base font-semibold text-zinc-100 tracking-tight">
-            B.Sc. in Computer Engineering
-          </h3>
-          <span class="text-xs font-mono text-zinc-500">2022 – Present</span>
-        </div>
-        <p class="text-xs font-mono text-sky-400">
-          Kharazmi University <span class="font-fa text-zinc-400 font-normal">(دانشگاه خوارزمی)</span> <span class="text-zinc-600">·</span> Tehran, Iran
-        </p>
-        <p class="text-xs text-zinc-300 pt-1 leading-relaxed">
-          Coursework & practical focus in Operating Systems, Distributed Systems, Computer Networks, Compilers, and Algorithm Analysis.
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION 05: TECHNICAL INDEX -->
-    <section id="stack" class="screen-line-b">
-      <div class="panel-header">
-        <h2 class="panel-title">Technical Index</h2>
-        <span class="panel-meta">Core Stack</span>
-      </div>
-
-      <div class="p-5 space-y-4 text-xs font-mono">
-        <div class="space-y-1.5">
-          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Backend & Cloud</span>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="badge-chip">Rust (Axum, Tokio)</span>
-            <span class="badge-chip">Python (FastAPI, Django)</span>
-            <span class="badge-chip">Docker</span>
-            <span class="badge-chip">Kubernetes</span>
-            <span class="badge-chip">CI/CD Pipelines</span>
-            <span class="badge-chip">Celery</span>
-            <span class="badge-chip">RabbitMQ</span>
-          </div>
-        </div>
-
-        <div class="space-y-1.5">
-          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Observability & Storage</span>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="badge-chip">Prometheus</span>
-            <span class="badge-chip">Grafana</span>
-            <span class="badge-chip">ELK Stack</span>
-            <span class="badge-chip">PostgreSQL</span>
-            <span class="badge-chip">Redis (Streams/Cache)</span>
-            <span class="badge-chip">SQLite (FTS5)</span>
-            <span class="badge-chip">SQLCipher (AES-256)</span>
-          </div>
-        </div>
-
-        <div class="space-y-1.5">
-          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Networking & Security</span>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="badge-chip">Zero-Copy SSE</span>
-            <span class="badge-chip">SOCKS5 Tunnels</span>
-            <span class="badge-chip">Cloudflare Pro Edge</span>
-            <span class="badge-chip">TLS 1.3 Termination</span>
-            <span class="badge-chip">JWT/OAuth2</span>
-          </div>
-        </div>
-
-        <div class="space-y-1.5">
-          <span class="text-zinc-400 font-semibold block text-[11px] uppercase tracking-wide">Frontend & Mobile</span>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="badge-chip">TypeScript</span>
-            <span class="badge-chip">React 19</span>
-            <span class="badge-chip">Next.js 15</span>
-            <span class="badge-chip">Kotlin (Compose M3)</span>
-            <span class="badge-chip">Three.js (WebGL)</span>
-            <span class="badge-chip">Tailwind CSS</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="p-5 text-xs font-mono text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-3 no-print">
-      <div>
-        © 2026 Mohammad Hossein Yaghobi. Hosted on <a href="https://pyr0ken.ir" class="text-zinc-400 hover:text-white transition">pyr0ken.ir</a>.
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="https://www.linkedin.com/in/mohammad-hossein-yaghoubi/" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition">LinkedIn</a>
-        <a href="https://github.com/pyr0ken" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition">GitHub</a>
-        <button onclick="copyToClipboard('mmdhosein.yaghoubi@gmail.com', this)" class="hover:text-zinc-300 transition cursor-pointer">Email</button>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-zinc-300 transition cursor-pointer">Back to Top ↑</button>
+      <div class="footer-tagline">
+        <code>pyr0ken.github.io</code> · zero trackers · pure html &amp; css
       </div>
     </footer>
-
-  </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg bg-zinc-900 border border-sky-500/40 text-white text-xs font-mono shadow-2xl transform translate-y-16 opacity-0 transition-all duration-200 flex items-center gap-2 pointer-events-none" role="status">
-    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
-    <span id="toast-message">Copied to clipboard!</span>
-  </div>
+  </main>
 
   <script>
-    function copyToClipboard(text, btnElement) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(() => {
-          showToast('Copied: ' + text);
-        }).catch(() => {
-          fallbackCopy(text);
-        });
-      } else {
-        fallbackCopy(text);
-      }
-    }
+    // --- Audio Feedback (Web Audio API Synthesizer - 0kb assets) ---
+    let soundEnabled = true;
+    let audioCtx = null;
 
-    function fallbackCopy(text) {
-      const el = document.createElement('textarea');
-      el.value = text;
-      el.style.position = 'fixed';
-      el.style.left = '-9999px';
-      document.body.appendChild(el);
-      el.select();
+    function playKeyClick(type = 'click') {
+      if (!soundEnabled) return;
       try {
-        document.execCommand('copy');
-        showToast('Copied: ' + text);
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        if (type === 'run') {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.09, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.08);
+        } else {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(700, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(260, audioCtx.currentTime + 0.035);
+          gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.035);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.035);
+        }
       } catch (e) {
-        showToast('Address: ' + text);
+        // AudioContext not allowed or not supported
       }
-      document.body.removeChild(el);
     }
 
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toast-message');
-      if (!toast || !toastMsg) return;
-      toastMsg.innerText = msg;
-      toast.classList.remove('translate-y-16', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-16', 'opacity-0');
-      }, 2200);
+    const soundToggle = document.getElementById('soundToggle');
+    const soundLabel = document.getElementById('soundLabel');
+    soundToggle.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      soundLabel.textContent = soundEnabled ? 'sound on' : 'sound off';
+      soundToggle.classList.toggle('muted', !soundEnabled);
+      if (soundEnabled) playKeyClick('click');
+    });
+
+    // --- Witty Responses Pool for hello_world("print") ---
+    const responses = [
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-stdout">[stdout]</span> "Hello, World!"',
+          '<span class="term-dim">[kernel]</span> Notice: Argument inverted. Standard reality now printing into pyr0ken\'s terminal.',
+          '<span class="term-success">✔ Status 200 OK</span> · 0.42ms execution time'
+        ]
+      },
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-stdout">[stdout]</span> "print"',
+          '<span class="term-warn">[compiler]</span> Wait, did you want me to print "Hello World" or say hello to "print"?',
+          '<span class="term-dim">Instructions unclear, brewed cold drip coffee instead ☕</span>'
+        ]
+      },
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-cyan">Inverting universe coordinates...</span> 🌎 ➔ 🙃 ➔ 🖨️',
+          '<span class="term-stdout">[stdout]</span> "!dlroW ,olleH"',
+          '<span class="term-dim">pyr0ken: "No worries, I\'ll hotfix it in production."</span>'
+        ]
+      },
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-warn">Traceback (most recent call last):</span>',
+          '  File "<span class="term-code">brain.py</span>", line 42, in <span class="term-func">hello_world</span>',
+          '<span class="term-err">RecursionError:</span> "print" called "hello_world", which called "print"...',
+          '<span class="term-dim">Stack overflow avoided by pure luck.</span>'
+        ]
+      },
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-stdout">[stdout]</span> "Hello from Arch Linux!"',
+          '<span class="term-dim">[profile]</span> Mohammad Hossein Yaghobi (pyr0ken)',
+          '<span class="term-dim">[specs]</span> Rust gateways · &lt;10MB RSS · 99.9% uptime SLA'
+        ]
+      },
+      {
+        header: 'EXEC: hello_world("print")',
+        lines: [
+          '<span class="term-success">[200 OK]</span> Payload received: "print"',
+          '<span class="term-stdout">[response]</span> "Goodbye, world... jk, I\'m building high-throughput systems."',
+          '<span class="term-dim">GitHub: github.com/pyr0ken</span>'
+        ]
+      }
+    ];
+
+    let responseIndex = 0;
+    const terminalFeed = document.getElementById('terminalFeed');
+
+    function appendToTerminal(htmlContent, isCommand = false) {
+      const entry = document.createElement('div');
+      entry.className = isCommand ? 'terminal-entry command-entry' : 'terminal-entry';
+      entry.innerHTML = htmlContent;
+      terminalFeed.appendChild(entry);
+      terminalFeed.scrollTop = terminalFeed.scrollHeight;
     }
+
+    function runHelloWorld() {
+      playKeyClick('run');
+      const res = responses[responseIndex % responses.length];
+      responseIndex++;
+
+      appendToTerminal(`<span class="term-prompt">❯</span> <span class="term-cmd">hello_world("print")</span>`, true);
+
+      setTimeout(() => {
+        let block = `<div class="exec-block">`;
+        res.lines.forEach(l => {
+          block += `<div class="term-line">${l}</div>`;
+        });
+        block += `</div>`;
+        appendToTerminal(block);
+      }, 70);
+    }
+
+    // --- Interactive Commands Engine ---
+    const commands = {
+      'help': () => {
+        return `
+          <div class="help-grid">
+            <div><span class="cmd-name">hello_world("print")</span> <span class="cmd-desc">Invert standard output</span></div>
+            <div><span class="cmd-name">whoami</span> <span class="cmd-desc">Identity &amp; background</span></div>
+            <div><span class="cmd-name">projects</span> <span class="cmd-desc">Key systems &amp; repositories</span></div>
+            <div><span class="cmd-name">skills</span> <span class="cmd-desc">Tech stack &amp; tools</span></div>
+            <div><span class="cmd-name">matrix</span> <span class="cmd-desc">Digital rain pulse</span></div>
+            <div><span class="cmd-name">flip</span> <span class="cmd-desc">Flip terminal 180°</span></div>
+            <div><span class="cmd-name">clear</span> <span class="cmd-desc">Clear screen</span></div>
+          </div>
+        `;
+      },
+      'whoami': () => {
+        return `
+          <div class="info-block">
+            <div class="title"><strong>Mohammad Hossein Yaghobi</strong> (pyr0ken)</div>
+            <div class="desc">Systems &amp; DevOps Software Engineer · Tehran, Iran</div>
+            <div class="meta">Computer Engineering @ Kharazmi University · National Innovation Silver Medalist</div>
+            <div class="sub">Crafting zero-copy gateways, asynchronous telemetry, and offline cryptography.</div>
+          </div>
+        `;
+      },
+      'projects': () => {
+        return `
+          <div class="proj-list">
+            <div class="proj-item">
+              <span class="proj-name"><a href="https://github.com/pyr0ken/oxiroute" target="_blank">Oxiroute</a></span>
+              <span class="proj-badge">Rust</span>
+              <div class="proj-desc">High-throughput AI gateway &amp; LLM router in pure Rust (&lt;10MB RSS, Axum SSE, Ratatui TUI).</div>
+            </div>
+            <div class="proj-item">
+              <span class="proj-name"><a href="https://github.com/pyr0ken/khales" target="_blank">Khales</a></span>
+              <span class="proj-badge">Kotlin</span>
+              <div class="proj-desc">Offline privacy personal finance app for Android. 100% on-device SMS parsing &amp; SQLCipher encryption.</div>
+            </div>
+            <div class="proj-item">
+              <span class="proj-name"><a href="https://github.com/pyr0ken/ai-trading-platform" target="_blank">AI Trading</a></span>
+              <span class="proj-badge">Python</span>
+              <div class="proj-desc">Pure Python ReAct trading core with 3-tier memory and real-time lightweight-charts canvas.</div>
+            </div>
+            <div class="proj-item">
+              <span class="proj-name"><a href="https://github.com/pyr0ken/golestan-automation" target="_blank">Golestan</a></span>
+              <span class="proj-badge">Python / SPA</span>
+              <div class="proj-desc">High-speed reverse-engineered academic client w/ SQLite FTS5 index &amp; live Vercel web SPA.</div>
+            </div>
+          </div>
+        `;
+      },
+      'skills': () => {
+        return `
+          <div class="skills-block">
+            <div><span class="tag">Rust</span> <span class="tag">Python</span> <span class="tag">Docker</span> <span class="tag">Kubernetes</span> <span class="tag">FastAPI</span> <span class="tag">Axum</span></div>
+            <div style="margin-top:4px"><span class="tag">Linux/Arch</span> <span class="tag">Redis</span> <span class="tag">PostgreSQL</span> <span class="tag">SQLite FTS5</span> <span class="tag">Zero-Copy SSE</span></div>
+          </div>
+        `;
+      },
+      'flip': () => {
+        const card = document.querySelector('.code-card');
+        card.classList.toggle('flipped');
+        return card.classList.contains('flipped') 
+          ? `<span class="term-warn">🙃 Page inverted! Type 'flip' to restore gravity.</span>`
+          : `<span class="term-success">Gravity restored.</span>`;
+      },
+      'matrix': () => {
+        triggerMatrixPulse();
+        return `<span class="term-cyan">⚡ Matrix pulse initiated... Wake up, Neo.</span>`;
+      },
+      'clear': () => {
+        terminalFeed.innerHTML = '';
+        return null;
+      },
+      'easter': () => {
+        return `
+          <div class="easter-egg">
+            <pre class="ascii-art">
+   /\\_/\\  
+  ( o.o )  hello_world("meow")
+   > ^ <   "System compiled with 100% pure curiosity."
+            </pre>
+          </div>
+        `;
+      },
+      'sudo': () => `<span class="term-err">pyr0ken is not in the sudoers file. This incident will be reported to Santa.</span>`,
+      'rm -rf /': () => `<span class="term-err">Permission denied: Did you really think Arch would let you do that? 😉</span>`,
+      'exit': () => `<span class="term-dim">There is no exit. You are now part of the daemon loop.</span>`,
+      'uname -a': () => `Linux archlinux 7.2.7-arch1-1 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux`,
+      'cat /etc/os-release': () => `NAME="Arch Linux"<br>ID=arch<br>PRETTY_NAME="Arch Linux"<br>HOME_URL="https://archlinux.org/"`
+    };
+
+    function executeCommand(rawCmd) {
+      const cmd = rawCmd.trim().toLowerCase();
+      playKeyClick('click');
+
+      appendToTerminal(`<span class="term-prompt">❯</span> <span class="term-cmd">${escapeHtml(rawCmd.trim())}</span>`, true);
+
+      if (!cmd) return;
+
+      if (cmd === 'hello_world("print")' || cmd === "hello_world('print')" || cmd === 'run') {
+        runHelloWorld();
+        return;
+      }
+
+      if (commands[cmd]) {
+        const output = commands[cmd]();
+        if (output !== null) {
+          appendToTerminal(`<div class="term-output">${output}</div>`);
+        }
+      } else {
+        appendToTerminal(`
+          <span class="term-err">zsh: command not found: ${escapeHtml(cmd)}</span>
+          <div class="term-dim">Type <span class="term-highlight">help</span> or click one of the quick chips above.</div>
+        `);
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Form submit
+    const cliForm = document.getElementById('cliForm');
+    const cliInput = document.getElementById('cliInput');
+
+    cliForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = cliInput.value;
+      if (val.trim()) {
+        executeCommand(val);
+        cliInput.value = '';
+      }
+    });
+
+    // Run Button
+    document.getElementById('runBtn').addEventListener('click', runHelloWorld);
+
+    // Code snippet click to run
+    document.getElementById('codeSnippet').addEventListener('click', runHelloWorld);
+
+    // Enter key when focused or anywhere on window (if not in input)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && document.activeElement !== cliInput) {
+        runHelloWorld();
+      }
+    });
+
+    // Clear Button
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      playKeyClick('click');
+      terminalFeed.innerHTML = '';
+      appendToTerminal(`<span class="term-dim">Console cleared. Type a command or run hello_world("print").</span>`);
+    });
+
+    // Copy Button
+    const copyBtn = document.getElementById('copyBtn');
+    const copyText = document.getElementById('copyText');
+    copyBtn.addEventListener('click', () => {
+      playKeyClick('click');
+      const snippet = 'hello_world("print")';
+      navigator.clipboard.writeText(snippet).then(() => {
+        copyText.textContent = 'copied!';
+        setTimeout(() => { copyText.textContent = 'copy'; }, 1800);
+      }).catch(() => {
+        copyText.textContent = 'copied!';
+        setTimeout(() => { copyText.textContent = 'copy'; }, 1800);
+      });
+    });
+
+    // Quick Chips
+    document.querySelectorAll('.chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cmd = btn.getAttribute('data-cmd');
+        if (cmd === 'hello_world("print")') {
+          runHelloWorld();
+        } else {
+          executeCommand(cmd);
+        }
+      });
+    });
+
+    // Matrix Pulse Effect
+    function triggerMatrixPulse() {
+      const container = document.querySelector('.playground-container');
+      container.classList.add('matrix-active');
+      setTimeout(() => {
+        container.classList.remove('matrix-active');
+      }, 2500);
+    }
+
+    // Initial greeting on load
+    window.addEventListener('DOMContentLoaded', () => {
+      appendToTerminal(`
+        <div class="welcome-box">
+          <div class="term-dim">Welcome to <span class="term-highlight">pyr0ken.github.io</span> [interactive sandbox]</div>
+          <div class="term-dim">Inverting the classic <code>print("hello world")</code> paradigm.</div>
+        </div>
+      `);
+      // Run once by default to show initial fun output
+      setTimeout(runHelloWorld, 350);
+    });
   </script>
 </body>
 </html>

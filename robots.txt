@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pyr0ken.ir/sitemap.xml
+Sitemap: https://pyr0ken.github.io/sitemap.xml
